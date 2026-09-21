@@ -1,0 +1,15 @@
+# Local Liza installation and agent configuration
+/AGENTS.md
+/CLAUDE.md
+/.claude/
+/.codex/
+/.opencode/
+/.bash-policy.yaml
+/.claudeignore
+/.sembleignore
+
+# Liza runtime, worktrees, and generated indexes
+/.liza/
+/.worktrees/
+/stacklit.json
+*.scip
