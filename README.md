@@ -28,7 +28,7 @@ Ouvrir http://localhost:8080. Aucun outil de compilation ni installation nécess
 2. Dans **Settings → Pages → Build and deployment → Source**, choisir **GitHub Actions**.
 3. Dans **Actions**, lancer **Publish GitHub Pages** (ou pousser une nouvelle modification sur `main`).
 
-Le workflow publie uniquement les quatre fichiers publics. Les chemins relatifs permettent un hébergement sous le nom du dépôt.
+Le workflow publie les fichiers publics du site (HTML, CSS, JS, logo et favicons). Les chemins relatifs permettent un hébergement sous le nom du dépôt.
 
 ## Modifier les messages et traductions
 
