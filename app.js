@@ -1,143 +1,134 @@
-const recapMessages = [
-  {
-    "title": "Préparer sa ville et gagner des points",
-    "short": "Préparation et points",
-    "tag": "RÉCAP 1/2",
-    "tone": "wait",
-    "fr": "⚔️ VIKINGS 1/2 — Gardez vos 3 meilleurs héros en ville et bloquez-les au poste de commandement. Sortez TOUTES vos troupes pour renforcer les alliés : leurs renforts défendent votre ville. Vous gardez vos points de défense et gagnez aussi des points chez les autres. Des troupes restées chez vous prennent des éliminations aux renforts et réduisent les points de vos alliés !",
-    "en": "⚔️ VIKINGS 1/2 — Keep your 3 best heroes in your city and lock them in the Command Center. Send ALL your troops out to reinforce allies: their reinforcements defend your city. You keep your defense points and also earn points at other cities. Troops left at home take kills from reinforcements, reducing your allies’ points!"
-  },
-  {
-    "title": "Répartir les renforts et suivre les attaques",
-    "short": "Renforts et rapports",
-    "tag": "RÉCAP 2/2",
-    "tone": "wait",
-    "fr": "🛡️ VIKINGS 2/2 — Événement → Membres : vérifiez qui est en ligne, les renforts reçus et qui vous renforcez déjà. Aidez d’abord les joueurs en ligne peu renforcés, puis les autres. Visez ~200 000 renforts au total par ville, à ajuster selon les rapports : 0 élimination par vos propres troupes chez vous, 100 % des Vikings tués au total. Vagues 10/20 : attendez les GO du R4 pour rappeler, rejoindre le QG après Raagui, puis repartir renforcer le même allié. Vérifiez rapports et carte, pas seulement le timer !",
-    "en": "🛡️ VIKINGS 2/2 — Event → Members: check who is online, incoming reinforcements, and whom you already reinforce. Help online players with few reinforcements first, then others. Aim for ~200,000 reinforcements in total per city, adjusted using reports: 0 kills by your own troops at home, 100% of Vikings killed overall. Waves 10/20: wait for the R4’s GO to recall, join HQ after Raagui, then return to reinforce the same ally. Check reports and the map, not just the timer!"
-  }
-];
 const explanationMessages = [
-  {
-    "title": "Le principe de la stratégie",
-    "short": "Le principe",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "🛡️ Vikings : on se défend les uns les autres ! Envoyez vos troupes chez vos alliés et faites défendre votre ville par leurs renforts. Vous marquez des points grâce aux Vikings éliminés dans votre ville, et vos troupes peuvent aussi gagner des points en défendant les autres.",
-    "en": "🛡️ Vikings: we defend each other! Send your troops to your allies and let their reinforcements defend your city. You earn points from Vikings killed in your city, and your troops can also earn points by defending others."
-  },
-  {
-    "title": "Garder ses trois meilleurs héros",
-    "short": "Les 3 héros",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "🦸 Gardez vos 3 meilleurs héros dans votre ville. Bloquez-les dans le poste de commandement pour éviter de les envoyer par erreur avec vos marches. Attention : garder ses héros à la maison ne veut pas dire y garder ses troupes !",
-    "en": "🦸 Keep your 3 best heroes in your city. Lock them in the Command Center to avoid accidentally sending them out with your marches. Keeping your heroes at home does not mean keeping your troops there!"
-  },
-  {
-    "title": "Sortir toutes ses troupes",
-    "short": "Vider sa ville",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "⚠️ Sortez toutes vos troupes de votre ville pour renforcer vos alliés. Si vos propres troupes restent chez vous, elles peuvent tuer des Vikings à la place des renforts et réduire les points de vos alliés. Vérifiez aussi les troupes revenues chez vous pendant l’événement. Votre défense doit être assurée par les renforts reçus.",
-    "en": "⚠️ Send all your troops out of your city to reinforce your allies. Troops left at home can kill Vikings instead of the reinforcements, reducing your allies’ points. Also check for troops returning home during the event. Your city should be defended by incoming reinforcements."
-  },
-  {
-    "title": "Comprendre les points",
-    "short": "Les points",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "💡 Les Vikings tués dans votre ville vous rapportent des points de défense, même si ce sont les renforts qui les éliminent. Vos alliés gagnent aussi des points de renfort pour leurs éliminations. Faire défendre votre ville par les autres ne vous retire donc pas vos points ! Pendant ce temps, vos troupes marquent chez eux.",
-    "en": "💡 Vikings killed in your city give you defense points, even when reinforcements get the kills. Your allies also earn reinforcement points for their kills. Letting others defend your city does not take away your defense points! Meanwhile, your troops earn points at their cities."
-  },
-  {
-    "title": "Un exemple pour comprendre",
-    "short": "Exemple concret",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "📊 Exemple : 1 000 Vikings sont éliminés dans votre ville. Sans vos troupes, les renforts font les 1 000 éliminations. Si vos troupes en tuent 300, il ne reste que 700 éliminations pour les alliés. Le total défendu est le même, mais les renforts ont moins d’occasions de marquer. Ce sont des nombres de Vikings, pas un barème de points.",
-    "en": "📊 Example: 1,000 Vikings are killed in your city. With none of your own troops at home, reinforcements get all 1,000 kills. If your troops kill 300, only 700 kills remain for your allies. The total defended is the same, but reinforcements have fewer chances to score. These are Viking counts, not point values."
-  },
-  {
-    "title": "Consulter la liste des membres",
-    "short": "Événement → Membres",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "📋 Pour organiser vos renforts : ouvrez l’événement Vikings, puis le bouton Membres. Vous pouvez y voir qui est en ligne, le niveau de renforcement des villes et les renforts que vous avez déjà envoyés. Regardez qui vous renforcez déjà avant d’envoyer une autre marche. Revenez régulièrement dans cette liste pour suivre les besoins de l’alliance.",
-    "en": "📋 To organize your reinforcements, open the Vikings event and tap Members. Check who is online, how well each city is reinforced, and the reinforcements you have already sent. Check whom you are already reinforcing before sending another march. Return to this list regularly to track the alliance’s needs."
-  },
-  {
-    "title": "Choisir qui aider en priorité",
-    "short": "Qui renforcer ?",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "🤝 Renforcez en priorité les membres en ligne qui ont peu ou pas de renforts. S’ils sont déjà bien couverts, aidez les autres villes qui en ont besoin. Entre deux membres en ligne avec 80 000 et 200 000 renforts, complétez d’abord celui à 80 000, sauf consigne du R4 ou besoin différent dans les rapports. L’objectif est d’aider tout le monde !",
-    "en": "🤝 Prioritize online members with few or no reinforcements. Once they are well covered, help other cities in need. Between two online members with 80,000 and 200,000 reinforcements, help the one at 80,000 first, unless the R4 instructs otherwise or reports show a different need. The goal is to help everyone!"
-  },
-  {
-    "title": "Combien de renforts envoyer ?",
-    "short": "Le repère de 200 000",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "🛡️ Notre repère : environ 200 000 troupes de renfort AU TOTAL par ville pour tenir jusqu’au bout, pas 200 000 par personne. C’est une base à ajuster selon la force des troupes, la difficulté et les rapports. Si une ville est déjà bien couverte, utilisez vos marches disponibles pour aider une ville moins renforcée.",
-    "en": "🛡️ Our guideline: around 200,000 reinforcement troops IN TOTAL per city to last through the event, not 200,000 per person. Adjust this starting point based on troop strength, difficulty, and battle reports. If a city is already well covered, use your available marches to help a less reinforced city."
-  },
-  {
-    "title": "Vérifier les rapports d’attaque",
-    "short": "Lire les rapports",
-    "tag": "EXPLICATION",
-    "tone": "wait",
-    "fr": "🔎 Après une attaque, vérifiez 2 choses dans le rapport : 1️⃣ Votre propre joueur doit faire 0 élimination dans votre ville. Sinon, vérifiez les troupes restées ou revenues chez vous. 2️⃣ En haut à droite, visez 100 % des Vikings éliminés au total. En dessous, signalez-le au R4 pour ajuster les renforts. Pour déplacer des troupes déjà en place, respectez les GO !",
-    "en": "🔎 After an attack, check 2 things in the report: 1️⃣ Your own player should have 0 kills in your city. Otherwise, check for troops left at home or returning there. 2️⃣ At the top right, aim for 100% of Vikings killed in total. If it is lower, tell the R4 so reinforcements can be adjusted. Wait for the GO before moving troops already in position!"
-  }
+  { title: 'Le principe et les points', titleEn: 'The basics and points', short: 'Principe et points', tag: 'COMPRENDRE', tone: 'wait',
+    tip: { fr: '🛡️ Faites défendre votre ville par les renforts : vous gardez vos points de défense et vos alliés peuvent aussi marquer.', en: '🛡️ Let reinforcements defend your city: you keep your defense points and your allies can score too.' },
+    when: 'À partager à l’avance, pour expliquer pourquoi on défend les autres.',
+    fr: '🛡️ Vikings : on se défend les uns les autres ! Vos troupes renforcent les alliés ; leurs renforts défendent votre ville. Vous gardez les points de défense des Vikings tués chez vous, même par les renforts. Vos troupes peuvent aussi marquer chez les autres. Des troupes restées chez vous prennent des éliminations aux renforts et réduisent les points de vos alliés.',
+    en: '🛡️ Vikings: we defend each other! Your troops reinforce allies; their reinforcements defend your city. You keep defense points for Vikings killed at home, even by reinforcements. Your troops can also score at other cities. Troops left at home take kills from reinforcements, reducing your allies’ points.' },
+  { title: 'Préparer sa ville', titleEn: 'Prepare your city', short: 'Héros et troupes', tag: 'COMPRENDRE', tone: 'wait',
+    tip: { fr: '🦸 Bloquez vos 3 meilleurs héros au poste de commandement pour éviter de les envoyer avec vos marches.', en: '🦸 Lock your 3 best heroes in the Command Center to avoid sending them with your marches.' },
+    when: 'À partager avant la préparation des marches.',
+    fr: '🦸 Gardez vos 3 meilleurs héros en ville et bloquez-les au poste de commandement pour éviter de les envoyer par erreur. Sortez TOUTES vos troupes pour renforcer les alliés et faites défendre votre ville par leurs renforts. Garder ses héros ne veut pas dire garder ses troupes ! Surveillez aussi les troupes revenues chez vous pendant l’événement.',
+    en: '🦸 Keep your 3 best heroes in your city and lock them in the Command Center to avoid sending them by mistake. Send ALL your troops to reinforce allies and let their reinforcements defend your city. Keeping heroes does not mean keeping troops at home! Also watch for troops returning home during the event.' },
+  { title: 'Répartir les renforts', titleEn: 'Distribute reinforcements', short: 'Qui renforcer ?', tag: 'COMPRENDRE', tone: 'wait',
+    tip: { fr: '🤝 Vikings → Membres : cherchez un joueur en ligne peu renforcé avant d’envoyer votre prochaine marche.', en: '🤝 Vikings → Members: look for an online player with few reinforcements before sending your next march.' },
+    when: 'À partager pour apprendre à choisir les villes à renforcer.',
+    fr: '🤝 Vikings → Membres : regardez qui est en ligne, les renforts reçus et qui vous renforcez déjà. Aidez d’abord les membres en ligne peu renforcés, puis les autres villes qui en ont besoin. Notre repère : ~200 000 renforts AU TOTAL par ville, pas par personne. Ajustez selon la force des troupes, la difficulté, les rapports et les consignes du R4.',
+    en: '🤝 Vikings → Members: check who is online, incoming reinforcements, and whom you already reinforce. Help online members with few reinforcements first, then other cities in need. Our guideline: ~200,000 reinforcements IN TOTAL per city, not per person. Adjust for troop strength, difficulty, reports, and R4 instructions.' },
+  { title: 'Lire les rapports', titleEn: 'Read the reports', short: 'Les deux contrôles', tag: 'COMPRENDRE', tone: 'wait',
+    tip: { fr: '🔎 Moins de 100 % de Vikings éliminés dans votre rapport ? Signalez votre ville au R4 pour ajuster les renforts.', en: '🔎 Fewer than 100% of Vikings killed in your report? Tell the R4 so your city’s reinforcements can be adjusted.' },
+    when: 'À expliquer à l’avance ; à consulter après les attaques.',
+    fr: '🔎 Après une attaque, contrôlez le rapport : 1️⃣ Votre joueur doit faire 0 élimination dans votre ville ; sinon, vérifiez les troupes restées ou revenues chez vous. 2️⃣ En haut à droite, visez 100 % des Vikings éliminés au total ; en dessous, signalez la ville au R4 pour ajuster les renforts. Respectez les GO pour déplacer les troupes déjà en place.',
+    en: '🔎 After an attack, check the report: 1️⃣ Your player should have 0 kills in your city; otherwise, check for troops left at home or returning there. 2️⃣ At the top right, aim for 100% of Vikings killed overall; if lower, tell the R4 so reinforcements can be adjusted. Follow the GO signals before moving troops already in position.' },
+  { title: 'Comprendre les vagues 10 et 20', titleEn: 'Understand waves 10 and 20', short: 'Vagues 10 et 20', tag: 'COMPRENDRE', tone: 'wait',
+    tip: { fr: '🏰 Vagues 10 et 20 : attendez chaque GO du R4 avant de déplacer vos troupes.', en: '🏰 Waves 10 and 20: wait for each R4 GO before moving your troops.' },
+    when: 'À expliquer avant l’événement, pour que les quatre GO soient connus.',
+    fr: '🏰 Vagues 10/20 : restez chez vos alliés jusqu’au GO RAPPEL. Attendez ensuite Raagui au QG et le GO QG pour le rejoindre. Restez au QG jusqu’au GO SORTIE, puis attendez le GO RENFORTS pour retourner chez les mêmes alliés. Le R4 vérifie les rapports et la carte avant les départs : un timer terminé ne suffit pas !',
+    en: '🏰 Waves 10/20: stay at your allies’ cities until GO RECALL. Then wait for Raagui to reach HQ and for GO HQ before joining him. Stay at HQ until GO LEAVE HQ, then wait for GO REINFORCE to return to the same allies. The R4 checks reports and the map before departures: a finished timer is not enough!' }
+];
+const reminderMessages = [
+  { title: 'Préparez vos villes', titleEn: 'Prepare your cities', short: 'Préparation', tag: 'AVANT / 1', tone: 'wait',
+    when: 'Avant le lancement, en laissant le temps de préparer les marches.',
+    fr: '⚔️ VIKINGS — Préparez vos villes :\n✅ Vos 3 meilleurs héros bloqués au poste de commandement.\n✅ TOUTES vos troupes envoyées chez les alliés.\n✅ Votre ville défendue par leurs renforts.\nVikings → Membres : aidez d’abord les joueurs en ligne peu renforcés, puis les autres villes dans le besoin.',
+    en: '⚔️ VIKINGS — Prepare your cities:\n✅ Your 3 best heroes locked in the Command Center.\n✅ ALL your troops sent to allies.\n✅ Your city defended by their reinforcements.\nVikings → Members: help online players with few reinforcements first, then other cities in need.' },
+  { title: 'Dernière vérification', titleEn: 'Final check', short: 'Avant le départ', tag: 'AVANT / 2', tone: 'wait',
+    when: 'Juste avant le lancement, une fois les renforts installés.',
+    fr: '🛡️ VIKINGS — Dernière vérification :\n✅ Aucune de vos troupes restée chez vous.\n✅ Villes couvertes : repère ~200 000 renforts AU TOTAL par ville, à ajuster selon les rapports. Signalez les manques au R4.\n✅ Vagues 10/20 : aucun déplacement sans GO du R4. Entrée au QG après Raagui ; retour chez les mêmes alliés.',
+    en: '🛡️ VIKINGS — Final check:\n✅ None of your own troops left at home.\n✅ Cities covered: guideline ~200,000 reinforcements IN TOTAL per city, adjusted using reports. Tell the R4 about gaps.\n✅ Waves 10/20: no moves without the R4’s GO. Enter HQ after Raagui; return to the same allies.' }
 ];
 const coordinationMessages = [
   { title: 'Consignes avant les vagues', short: 'Les consignes', tag: 'PRÉPARATION', tone: 'wait',
+    titleEn: "Instructions before the waves", when: "Avant les vagues 10 et 20.",
     fr: '⚔️ Vagues 10 et 20 : suivez mes GO pour chaque déplacement ! Ne retirez pas vos renforts trop tôt : ils pourraient manquer l’attaque des Vikings chez votre allié. Les timers d’arrivée sont trompeurs : vérifiez les rapports de combat et la carte. Un timer terminé ne suffit pas pour partir !',
     en: '⚔️ Waves 10 & 20: wait for my GO before each move! Do not recall reinforcements too early: they could miss the Viking attack at your ally’s city. Arrival timers are misleading: check battle reports and the map. A finished timer alone does not mean you can leave!' },
   { title: 'Organisation au QG', short: 'Organisation au QG', tag: 'PRÉPARATION', tone: 'wait',
+    titleEn: "HQ organization", when: "Avant les vagues 10 et 20, pour préparer le passage au QG.",
     fr: '🏰 Pour les vagues 10 et 20, nous attendons que Raagui soit arrivé au QG avant de le rejoindre. Je donnerai le GO pour entrer, puis le GO pour sortir après l’attaque. Ensuite, retournez renforcer le même allié qu’avant. Aucun déplacement sans mon signal !',
     en: '🏰 For waves 10 & 20, we wait until Raagui has arrived at HQ before joining him. I will give the GO to enter, then the GO to leave after the attack. Afterwards, return to reinforce the same ally as before. No moves without my signal!' },
   { title: 'Rappel avant le déplacement', short: 'Maintenir les renforts', tag: 'ATTENDRE', tone: 'wait',
+    titleEn: "Reminder before moving", when: "Avant le GO rappel, tant que les attaques chez les alliés ne sont pas confirmées.",
     fr: '✋ Gardez vos renforts chez vos alliés ! Ne vous fiez pas uniquement aux timers : l’attaque peut encore être en route. Nous vérifions les rapports et la carte avant de bouger. Attendez mon GO pour rappeler vos troupes.',
     en: '✋ Keep your reinforcements at your allies’ cities! Do not rely only on timers: the attack may still be on its way. We are checking reports and the map before moving. Wait for my GO to recall your troops.' },
   { title: 'GO pour retirer les renforts', short: 'GO rappel', tag: 'RAPPELER', tone: 'go',
+    titleEn: "GO RECALL", when: "Après confirmation des attaques chez les alliés dans les rapports et sur la carte.",
     fr: '🟢 GO RAPPEL ! Retirez vos renforts de chez vos alliés. 🛑 N’entrez pas encore au QG : nous attendons l’arrivée de Raagui et mon prochain GO !',
     en: '🟢 GO RECALL! Recall your reinforcements from your allies’ cities. 🛑 Do not enter HQ yet: wait for Raagui to arrive and for my next GO!' },
   { title: 'GO pour entrer au QG', short: 'GO entrée QG', tag: 'REJOINDRE', tone: 'go',
+    titleEn: "GO HQ", when: "Après confirmation de l’arrivée de Raagui au QG.",
     fr: '🟢 GO QG ! Raagui est arrivé : envoyez maintenant vos renforts au QG ! Restez jusqu’à mon GO de sortie, même si le timer semble terminé.',
     en: '🟢 GO HQ! Raagui has arrived: send your reinforcements to HQ now! Stay until my GO to leave, even if the timer appears to have finished.' },
   { title: 'Attendre l’attaque au QG', short: 'Tenir le QG', tag: 'ATTENDRE', tone: 'stop',
+    titleEn: "Wait for the HQ attack", when: "Au QG, en attendant la confirmation de l’attaque.",
     fr: '🛑 Restez au QG ! Ne retirez pas vos troupes sur la seule base du timer. Nous attendons la confirmation de l’attaque dans les rapports et sur la carte. Je donne le GO dès que vous pouvez sortir.',
     en: '🛑 Stay at HQ! Do not recall your troops based only on the timer. We are waiting for confirmation of the attack in reports and on the map. I will give the GO when you can leave.' },
   { title: 'GO pour sortir du QG', short: 'GO sortie QG', tag: 'SORTIR', tone: 'go',
+    titleEn: "GO LEAVE HQ", when: "Après confirmation de l’attaque au QG dans les rapports et sur la carte.",
     fr: '🟢 GO SORTIE QG ! L’attaque est confirmée, rappelez vos troupes maintenant. Préparez-vous à retourner chez le même allié que vous renforciez avant !',
     en: '🟢 GO LEAVE HQ! The attack is confirmed: recall your troops now. Get ready to return to the same ally you were reinforcing before!' },
   { title: 'GO pour renforcer à nouveau', short: 'GO renforts', tag: 'RENFORCER', tone: 'go',
+    titleEn: "GO REINFORCE", when: "Après le rappel du QG, pour remettre les renforts en place.",
     fr: '🟢 GO RENFORTS ! Dès que vos troupes sont rentrées, renvoyez-les chez le même allié qu’avant. Faites vite pour être en place avant la prochaine attaque ! 🛡️',
     en: '🟢 GO REINFORCE! As soon as your troops return, send them back to the same ally as before. Move quickly to be in position before the next attack! 🛡️' }
 ];
-let messageGroup = 'recap';
-let messages = recapMessages;
-let selected = 0;
+const extraMessages = {
+  explanations: [
+    ...reminderMessages,
+    { title: 'Exemple : les points', titleEn: 'Example: points', when: 'Seulement si le partage des éliminations reste flou.',
+      fr: '📊 Sur 1 000 Vikings tués dans votre ville : si les renforts font tout, ils se partagent 1 000 éliminations. Si vos troupes en font 300, il n’en reste que 700 pour les alliés. Vous gardez les points de défense dans les deux cas. Ce sont des nombres de Vikings, pas un barème de points.',
+      en: '📊 Out of 1,000 Vikings killed in your city: if reinforcements do all the work, they share 1,000 kills. If your own troops get 300, only 700 remain for allies. You keep defense points in both cases. These are Viking counts, not point values.' }
+  ],
+  coordination: [
+    { title: 'Maintenir les renforts', titleEn: 'Keep reinforcements in place', when: 'Si des joueurs risquent de partir avant le GO rappel.',
+      fr: '✋ Gardez vos renforts chez vos alliés. Attendez mon GO RAPPEL : un timer terminé ne confirme pas la fin de l’attaque.',
+      en: '✋ Keep your reinforcements at your allies’ cities. Wait for my GO RECALL: a finished timer does not confirm the attack is over.' },
+    { title: 'Tenir le QG', titleEn: 'Hold HQ', when: 'Si des joueurs risquent de quitter le QG avant le GO sortie.',
+      fr: '🛑 Restez au QG jusqu’à mon GO SORTIE. Nous attendons la confirmation de l’attaque dans les rapports et sur la carte.',
+      en: '🛑 Stay at HQ until my GO LEAVE HQ. We are waiting for confirmation of the attack in reports and on the map.' }
+  ]
+};
+const groups = {
+  explanations: { messages: explanationMessages, label: 'COMPRENDRE ET SE PRÉPARER',
+    hint: 'Choisis un sujet pour comprendre la stratégie, puis copie son astuce si un rappel suffit. Les checklists de préparation sont disponibles dans « À envoyer si besoin ».' },
+  coordination: { messages: coordinationMessages, label: 'EN DIRECT / VAGUES 10 & 20',
+    hint: 'Les huit messages des vagues 10 et 20, dans l’ordre : consignes, organisation, attentes et GO. Copie chacun au bon moment.' }
+};
+let messageGroup = 'explanations';
+let messages = explanationMessages;
 let language = 'fr';
 let toastTimer;
-const panel = document.querySelector('#message-panel');
-const steps = document.querySelector('#steps');
 const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
+function messageCard(item, i, extra = false) {
+  const title = language === 'en' ? item.titleEn : item.title;
+  const extraAttribute = extra ? 'data-extra' : '';
+  return `<article class="message-card">
+    <div class="message-row">
+      <h3 lang="${language}">${title}</h3>
+      <div class="copy-actions" role="group" aria-label="Copier : ${title}">
+        <button type="button" class="copy-small" data-copy="${i}" ${extraAttribute} data-copy-lang="fr" aria-label="Copier en français : ${title}">${copyIcon} FR</button>
+        <button type="button" class="copy-small" data-copy="${i}" ${extraAttribute} data-copy-lang="en" aria-label="Copier en anglais : ${title}">${copyIcon} EN</button>
+      </div>
+    </div>
+    <p class="send-timing">${item.when}</p>
+    <p class="message-text" lang="${language}">${item[language]}</p>
+    ${item.tip ? `<section class="quick-tip" aria-label="Astuce : ${title}">
+      <div class="message-row">
+        <h4>Astuce</h4>
+        <div class="copy-actions" role="group" aria-label="Copier l’astuce : ${title}">
+          <button type="button" class="copy-small" data-copy="${i}" data-tip data-copy-lang="fr" aria-label="Copier l’astuce en français : ${title}">${copyIcon} FR</button>
+          <button type="button" class="copy-small" data-copy="${i}" data-tip data-copy-lang="en" aria-label="Copier l’astuce en anglais : ${title}">${copyIcon} EN</button>
+        </div>
+      </div>
+      <p class="message-text" lang="${language}">${item.tip[language]}</p>
+    </section>` : ''}
+  </article>`;
+}
 function render() {
-  const explaining = messageGroup !== 'coordination';
-  const count = String(messages.length).padStart(2, '0');
-  document.querySelector('#message-count').textContent = count;
+  document.querySelector('#message-count').textContent = String(messages.length).padStart(2, '0');
   document.querySelectorAll('[data-group]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.group === messageGroup)));
-  document.querySelector('#message-hint').textContent = messageGroup === 'recap'
-    ? 'Toute la stratégie en deux messages : copie le premier, puis le second pour les partager dans le chat.'
-    : explaining
-    ? 'Un sujet par message : partage les explications dans cet ordre ou choisis celle dont ton alliance a besoin.'
-    : 'Choisis une étape, copie le message et colle-le dans le chat de l’alliance à ton signal.';
-  steps.innerHTML = messages.map((m, i) => `<button type="button" data-step="${i}" ${i === selected ? 'aria-current="step"' : ''}><span class="step-number">${String(i + 1).padStart(2, '0')}</span><span>${m.short}</span><span class="step-arrow" aria-hidden="true">↗</span></button>`).join('');
-  const m = messages[selected];
-  panel.innerHTML = `<div class="panel-top"><span class="badge ${m.tone}">${m.tag}</span><span class="panel-count">${String(selected + 1).padStart(2, '0')} / ${count}</span></div><h3>${m.title}</h3><div class="message-label">${language === 'fr' ? 'FRANÇAIS' : 'ENGLISH'} <span>${explaining ? 'STRATÉGIE DES VILLES' : 'VAGUES 10 & 20'}</span></div><p class="message-text" lang="${language}">${m[language]}</p><div class="panel-actions"><button type="button" class="copy-primary" data-copy="${selected}">${copyIcon} Copier le message <span>${language.toUpperCase()}</span></button><button type="button" class="copy-secondary" data-copy="${selected}" data-copy-lang="${language === 'fr' ? 'en' : 'fr'}">Copier en ${language === 'fr' ? 'anglais' : 'français'}</button></div><div class="panel-bottom"><span>${explaining ? 'À partager pour préparer l’alliance.' : 'À envoyer sur ton signal.'}</span><button type="button" id="next" ${selected === messages.length - 1 ? 'disabled' : ''}>${explaining ? 'Message suivant' : 'Étape suivante'} <span aria-hidden="true">→</span></button></div>`;
-  document.querySelector('#all-messages').innerHTML = messages.map((item, i) => `<article><div><span class="eyebrow">${String(i + 1).padStart(2, '0')}</span><h3>${item.title}</h3><button type="button" class="copy-small" data-copy="${i}" aria-label="Copier : ${item.title}">${copyIcon} ${language.toUpperCase()}</button></div><p lang="${language}">${item[language]}</p></article>`).join('');
+  document.querySelector('#message-hint').textContent = groups[messageGroup].hint;
+  document.querySelector('#all-messages').innerHTML = messages.map((item, i) => messageCard(item, i)).join('');
+  const extras = extraMessages[messageGroup];
+  document.querySelector('#extra-messages').hidden = extras.length === 0;
+  document.querySelector('#extra-message-list').innerHTML = extras.map((item, i) => messageCard(item, i, true)).join('');
   document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === language)));
 }
 function notify(text) {
@@ -147,8 +138,10 @@ function notify(text) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('visible'), 2800);
 }
-async function copy(index, lang) {
-  const text = messages[index][lang];
+async function copy(index, lang, extra = false, tip = false) {
+  const message = (extra ? extraMessages[messageGroup] : messages)[index];
+  const title = lang === 'en' ? message.titleEn : message.title;
+  const text = `${title}\n\n${(tip ? message.tip : message)[lang]}`;
   try {
     if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
     await navigator.clipboard.writeText(text);
@@ -172,18 +165,11 @@ document.addEventListener('click', event => {
   if (!button) return;
   if (button.dataset.group) {
     messageGroup = button.dataset.group;
-    messages = { recap: recapMessages, explanations: explanationMessages, coordination: coordinationMessages }[messageGroup];
-    selected = 0;
+    messages = groups[messageGroup].messages;
+    document.querySelector('#extra-messages').open = false;
     render();
   }
-  if (button.dataset.step !== undefined) {
-    selected = Number(button.dataset.step); render();
-    steps.querySelector(`[data-step="${selected}"]`).focus();
-  }
   if (button.dataset.lang) { language = button.dataset.lang; render(); }
-  if (button.dataset.copy !== undefined) copy(Number(button.dataset.copy), button.dataset.copyLang || language);
-  if (button.id === 'next' && selected < messages.length - 1) {
-    selected++; render(); panel.querySelector('.copy-primary').focus();
-  }
+  if (button.dataset.copy !== undefined) copy(Number(button.dataset.copy), button.dataset.copyLang || language, button.dataset.extra !== undefined, button.dataset.tip !== undefined);
 });
 render();
