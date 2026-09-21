@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101719">
+  <meta name="description" content="Le poste de commandement Vikings : stratégie des vagues 10 et 20 et messages d’alliance en français et en anglais.">
+  <title>Vikings — Poste de commandement</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#messages">Aller aux messages</a>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="crest" aria-hidden="true">ᛉ</span><span>KINGSHOT <span class="brand-divider">/</span> VIKINGS</span></a>
+    <span class="role">GUIDE R4</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div><p class="eyebrow">COORDINATION D’ALLIANCE</p><h1>Chaque mouvement.<br><em>Au bon signal.</em></h1><p class="intro-copy">La stratégie et les messages pour garder l’alliance synchronisée pendant les Vikings.</p></div>
+      <div class="wave-mark" aria-label="Vagues 10 et 20"><span>VAGUES QG</span><strong>10 <i>/</i> 20</strong><small>Un seul mot d’ordre : attendre le GO.</small></div>
+    </section>
+    <div class="workspace">
+      <aside aria-labelledby="strategy-title">
+        <div class="aside-heading"><span class="eyebrow">LE PLAN DE BATAILLE</span><h2 id="strategy-title">Aucun départ<br>sans signal.</h2></div>
+        <ol class="strategy">
+          <li><strong>Maintenir les renforts</strong><p>Vérifier les rapports et la carte avant de quitter les alliés.</p></li>
+          <li><strong>Rappeler au GO</strong><p>Retirer les renforts, puis attendre l’arrivée de Raagui au QG.</p></li>
+          <li><strong>Rejoindre le QG</strong><p>Entrer au second GO et rester jusqu’à la confirmation de l’attaque.</p></li>
+          <li><strong>Revenir chez l’allié</strong><p>Au GO de sortie, rappeler les troupes, puis renforcer le même allié au GO renforts.</p></li>
+        </ol>
+        <div class="warning"><span aria-hidden="true">!</span><p><strong>Le timer ne fait pas foi.</strong>Un timer terminé ne suffit pas : vérifier les rapports de combat et la carte.</p></div>
+        <p class="source-note">Stratégie de l’alliance, issue des consignes R4 fournies.</p>
+      </aside>
+      <section class="messages" id="messages" aria-labelledby="messages-title">
+        <div class="messages-heading"><div><p class="eyebrow">PRÊTS POUR LE CHAT</p><h2 id="messages-title">Messages rapides <span>08</span></h2></div><div class="language" role="group" aria-label="Langue des messages"><button type="button" data-lang="fr" aria-pressed="true">FR</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+        <p class="copy-hint">Choisis une étape, copie le message et colle-le dans le chat de l’alliance.</p>
+        <div class="message-layout"><nav class="steps" aria-label="Étapes de l’événement" id="steps"></nav><div id="message-panel" class="message-panel" aria-live="polite"></div></div>
+        <details class="all-messages"><summary>Tous les messages <span>Consulter la séquence complète</span></summary><div id="all-messages"></div></details>
+      </section>
+    </div>
+  </main>
+  <footer><span>KINGSHOT / VIKINGS</span><span>Les rapports. La carte. Puis le GO.</span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <noscript><p>Active JavaScript pour afficher et copier les messages rapides.</p></noscript>
+</body>
+</html>
