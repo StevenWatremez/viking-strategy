@@ -2,8 +2,8 @@
 
 Page statique adaptée au mobile : stratégie des Vikings et messages traduits en français, anglais et espagnol, avec traduction intégrale du site et copie en un clic.
 
-- **Comprendre et se préparer** : huit messages dans leur ordre logique (principe et exemple des points, préparation, renforts, dernière vérification, vagues 10 et 20, rapports).
-- **Pendant l’événement** : dix messages des vagues 10 et 20 dans leur ordre, avec les rappels courts placés juste après les consignes détaillées correspondantes.
+- **Comprendre et se préparer** : neuf messages dans leur ordre logique (principe et points avec exemple, préparation, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement).
+- **Pendant l’événement** : onze messages (consignes et GO des vagues 10 et 20 avec leurs rappels, ainsi qu'un rappel final sur l'interdiction de soigner et d'éteindre le feu).
 
 Le sélecteur de langue situé dans la barre supérieure (`FR` / `EN` / `ES`) traduit l'ensemble du site et des messages. Sur chaque carte de message, les boutons de copie s'adaptent selon la langue choisie :
 - En **FR** : boutons de copie **FR** et **EN**
