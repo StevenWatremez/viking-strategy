@@ -1,54 +1,63 @@
 const explanationMessages = [
-  { title: '🚨 VIKINGS : Le principe et les points', titleEn: '🚨 VIKINGS: The basics and points', titleEs: '🚨 VIKINGOS: El principio y los puntos', short: 'Principe et points', tag: 'COMPRENDRE', tone: 'wait',
+  { title: '🚨 VIKINGS : Le principe et les points', titleEn: '🚨 VIKINGS: The basics and points', titleEs: '🚨 VIKINGOS: El principio y los puntos', titleAr: '🚨 الفايكنغز: المبدأ والنقاط', short: 'Principe et points', tag: 'COMPRENDRE', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: O básico e os pontos',
+    ar: '🛡️ عزز حلفاءك واجعل قواتهم تدافع عن مدينتك: تحتفظ بكامل نقاط الدفاع الخاصة بك!\n\n⚠️ القوات المتبقية في مدينتك تسلب التصفيات من التعزيزات وتقلل نقاط حلفائك.\n\n📊 مثال (1000 فايكنغ في مدينتك):\n• التعزيزات وحدها = 1000 تصفية للحلفاء.\n• قواتك تقضي على 300 = يتبقى 700 فقط للحلفاء.\nتحتفظ بنقاط الدفاع في الحالتين! (عدد الفايكنغز، وليس سلم النقاط).',
     'pt-BR': '🛡️ Reforce seus aliados e deixe que defendam sua cidade: você mantém todos os seus pontos de defesa!\n\n⚠️ Tropas em casa tiram eliminações dos reforços e reduzem os pontos dos aliados.\n\n📊 Exemplo (1.000 Vikings mortos na sua cidade):\n• Só reforços = 1.000 eliminações para os aliados.\n• Suas tropas fazem 300 = sobram 700 para os aliados.\nVocê mantém os pontos de defesa nos dois casos! (Número de Vikings, não valor em pontos).',
     fr: '🛡️ Renforcez vos alliés et faites défendre votre ville par les leurs : vous gardez tous vos points de défense chez vous !\n\n⚠️ Des troupes restées chez vous prennent des éliminations aux renforts et réduisent les points de vos alliés.\n\n📊 Exemple (1 000 Vikings tués chez vous) :\n• Renforts seuls = 1 000 éliminations pour les alliés.\n• Vos troupes en font 300 = seulement 700 pour les alliés.\nVous gardez vos points de défense dans les deux cas !',
     en: '🛡️ Reinforce your allies and let their troops defend your city: you keep all your city defense points!\n\n⚠️ Troops left at home take kills from reinforcements and reduce your allies’ points.\n\n📊 Example (1,000 Vikings killed at your city):\n• Reinforcements do all: 1,000 kills shared by allies.\n• Your troops get 300: only 700 remain for allies.\nYou keep defense points in both cases! (Viking counts, not point values).',
     es: '🛡️ ¡Refuerza a tus aliados y deja que defiendan tu ciudad: conservas todos tus puntos de defensa!\n\n⚠️ Las tropas que dejas en casa quitan bajas a los refuerzos y reducen los puntos de tus aliados.\n\n📊 Ejemplo (1 000 vikingos en tu ciudad):\n• Solo refuerzos = 1 000 bajas para los aliados.\n• Tus tropas hacen 300 = solo quedan 700 para los aliados.\n¡Conservas tus puntos de defensa en ambos casos! (Cantidades de vikingos, no escala de puntos).' },
-  { title: '🚨 VIKINGS : Préparer sa ville', titleEn: '🚨 VIKINGS: Prepare your city', titleEs: '🚨 VIKINGOS: Preparar la ciudad', short: 'Héros et troupes', tag: 'COMPRENDRE', tone: 'wait',
+  { title: '🚨 VIKINGS : Préparer sa ville', titleEn: '🚨 VIKINGS: Prepare your city', titleEs: '🚨 VIKINGOS: Preparar la ciudad', titleAr: '🚨 الفايكنغز: تجهيز المدينة', short: 'Héros et troupes', tag: 'COMPRENDRE', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Prepare sua cidade',
+    ar: '🦸 احتفظ بأفضل 3 أبطال في مدينتك وثبتهم في مركز القيادة لتجنب إرسالهم بالخطأ. أخرج كل قواتك لتعزيز الحلفاء، خاصة المشاة والرماة، واجعل تعزيزاتهم تدافع عن مدينتك. الاحتفاظ بالأبطال لا يعني إبقاء القوات في مدينتك! راقب أيضاً القوات التي تعود خلال الحدث.',
     'pt-BR': '🦸 Mantenha seus 3 melhores heróis na cidade e fixe-os no posto de comando para não enviá-los por engano. Envie TODAS as suas tropas para reforçar aliados, principalmente infantaria e arqueiros, e deixe os reforços deles defenderem sua cidade. Manter os heróis não significa manter tropas em casa! Fique de olho nas tropas que voltarem durante o evento.',
     fr: '🦸 Gardez vos 3 meilleurs héros en ville et bloquez-les au poste de commandement pour éviter de les envoyer par erreur. Sortez TOUTES vos troupes pour renforcer les alliés, surtout infanterie et archers, et faites défendre votre ville par leurs renforts. Garder ses héros ne veut pas dire garder ses troupes ! Surveillez aussi les troupes revenues chez vous pendant l’événement.',
     en: '🦸 Keep your 3 best heroes in your city and lock them in the Command Center to avoid sending them by mistake. Send ALL your troops to reinforce allies—especially infantry and archers—and let their reinforcements defend your city. Keeping heroes does not mean keeping troops at home! Also watch for troops returning home during the event.',
     es: '🦸 Mantén tus 3 mejores héroes en la ciudad y bloquéalos en el puesto de mando para no enviarlos por error. Saca TODAS tus tropas para reforzar aliados, sobre todo infantería y arqueros, y deja que sus refuerzos defiendan tu ciudad. ¡Guardar héroes no significa guardar tropas! Vigila también las tropas que regresen a casa durante el evento.' },
-  { title: '🚨 VIKINGS : Préparez vos villes', titleEn: '🚨 VIKINGS: Prepare your cities', titleEs: '🚨 VIKINGOS: Preparad vuestras ciudades', short: 'Préparation', tag: 'AVANT / 1', tone: 'wait',
+  { title: '🚨 VIKINGS : Préparez vos villes', titleEn: '🚨 VIKINGS: Prepare your cities', titleEs: '🚨 VIKINGOS: Preparad vuestras ciudades', titleAr: '🚨 الفايكنغز: جهزوا مدنكم', short: 'Préparation', tag: 'AVANT / 1', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Preparem suas cidades',
+    ar: '✅ أفضل 3 أبطال مثبتون في مركز القيادة.\n✅ كل قواتكم مرسلة إلى الحلفاء، خاصة المشاة والرماة.\n✅ مدينتكم محمية بتعزيزاتهم.\nفي صفحة الحدث، افتحوا الفايكنغز ← الأعضاء: ستعرفون من متصل، ومستوى تعزيز كل مدينة، ومن تعززونه بالفعل. ساعدوا أولاً اللاعبين المتصلين ذوي التعزيزات القليلة، ثم المدن المحتاجة الأخرى.',
     'pt-BR': '✅ Seus 3 melhores heróis fixos no posto de comando.\n✅ TODAS as tropas com os aliados, principalmente infantaria e arqueiros.\n✅ Sua cidade defendida pelos reforços deles.\nNa página do evento, abram Vikings → Membros: vejam quem está online, o nível de reforço de cada cidade e quem vocês já estão reforçando. Ajudem primeiro os jogadores online com poucos reforços, depois as outras cidades que precisarem.',
     fr: '✅ Vos 3 meilleurs héros bloqués au poste de commandement.\n✅ TOUTES vos troupes envoyées chez les alliés, surtout infanterie et archers.\n✅ Votre ville défendue par leurs renforts.\nDans la page de l’événement, ouvrez Vikings → Membres : vous verrez qui est en ligne, le niveau de renfort de chaque ville et les membres auxquels vous envoyez déjà des renforts. Aidez d’abord les joueurs en ligne peu renforcés, puis les autres villes dans le besoin.',
     en: '✅ Your 3 best heroes locked in the Command Center.\n✅ ALL your troops sent to allies—especially infantry and archers.\n✅ Your city defended by their reinforcements.\nOn the event page, open Vikings → Members: you will see who is online, the reinforcement level of each city, and the members you are already sending reinforcements to. Help online players with few reinforcements first, then other cities in need.',
     es: '✅ Vuestros 3 mejores héroes bloqueados en el puesto de mando.\n✅ TODAS vuestras tropas enviadas a los aliados, sobre todo infantería y arqueros.\n✅ Vuestra ciudad defendida por sus refuerzos.\nEn la página del evento, abrid Vikingos → Miembros: veréis quién está en línea, el nivel de refuerzos de cada ciudad y los miembros a quienes ya enviáis refuerzos. Ayudad primero a los jugadores en línea poco reforzados y luego a las demás ciudades necesitadas.' },
-  { title: '🚨 VIKINGS : Répartir les renforts', titleEn: '🚨 VIKINGS: Distribute reinforcements', titleEs: '🚨 VIKINGOS: Repartir los refuerzos', short: 'Qui renforcer ?', tag: 'COMPRENDRE', tone: 'wait',
+  { title: '🚨 VIKINGS : Répartir les renforts', titleEn: '🚨 VIKINGS: Distribute reinforcements', titleEs: '🚨 VIKINGOS: Repartir los refuerzos', titleAr: '🚨 الفايكنغز: توزيع التعزيزات', short: 'Qui renforcer ?', tag: 'COMPRENDRE', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Distribuam os reforços',
+    ar: '🤝 في صفحة الحدث، افتحوا الفايكنغز ← الأعضاء. تُظهر القائمة من متصل، ومستوى التعزيز لكل مدينة، ومن أرسلتم لهم بالفعل. ساعدوا أولاً المتصلين ذوي التعزيزات القليلة، ثم بقية المدن المحتاجة. معيارنا: ~200,000 تعزيز بالإجمالي لكل مدينة، وليس لكل شخص. عدلوا حسب قوة القوات، والصعوبة، والتقارير، وتعليمات R4.',
     'pt-BR': '🤝 Na página do evento, abram Vikings → Membros. A lista mostra quem está online, o nível de reforço de cada cidade e quem vocês já reforçaram. Ajudem primeiro os membros online com poucos reforços, depois as outras cidades que precisarem. Nossa referência: ~200.000 reforços NO TOTAL por cidade, não por pessoa. Ajustem conforme a força das tropas, a dificuldade, os relatórios e as instruções do R4.',
     fr: '🤝 Dans la page de l’événement, ouvrez Vikings → Membres. Cette liste montre qui est en ligne, le niveau de renfort reçu par chaque ville et les membres auxquels vous avez déjà envoyé des renforts. Aidez d’abord les membres en ligne peu renforcés, puis les autres villes qui en ont besoin. Notre repère : ~200 000 renforts AU TOTAL par ville, pas par personne. Ajustez selon la force des troupes, la difficulté, les rapports et les consignes du R4.',
     en: '🤝 On the event page, open Vikings → Members. This list shows who is online, the reinforcement level of each city, and the members you have already sent reinforcements to. Help online members with few reinforcements first, then other cities in need. Our guideline: ~200,000 reinforcements IN TOTAL per city, not per person. Adjust for troop strength, difficulty, reports, and R4 instructions.',
     es: '🤝 En la página del evento, abrid Vikingos → Miembros. Esta lista muestra quién está en línea, el nivel de refuerzos de cada ciudad y los miembros a quienes ya habéis enviado refuerzos. Ayudad primero a los miembros en línea poco reforzados, luego a las otras ciudades necesitadas. Nuestra referencia: ~200 000 refuerzos EN TOTAL por ciudad, no por persona. Ajustad según la fuerza de tropas, dificultad, informes y órdenes del R4.' },
-  { title: '🚨 VIKINGS : Ni soin ni extinction', titleEn: '🚨 VIKINGS: No healing, no extinguishing', titleEs: '🚨 VIKINGOS: Ni curaciones ni apagar fuego', short: 'Soin et feu', tag: 'RÈGLE D’OR', tone: 'stop',
+  { title: '🚨 VIKINGS : Ni soin ni extinction', titleEn: '🚨 VIKINGS: No healing, no extinguishing', titleEs: '🚨 VIKINGOS: Ni curaciones ni apagar fuego', titleAr: '🚨 الفايكنغز: لا علاج ولا إطفاء', short: 'Soin et feu', tag: 'RÈGLE D’OR', tone: 'stop',
     titlePtBr: '🚨 VIKINGS: Sem cura e sem apagar o fogo',
+    ar: '🩹 لا تعالجوا: العلاج يعيد القوات إلى مدينتكم، فتقتل الفايكنغز بدلاً من التعزيزات وتحرم حلفاءكم من نقاطهم (مع هدر التسريعات).\n🔥 لا تطفئوا النيران: احتراق المدينة يشير إلى سقوطها (لا تُستهدف بعد هزيمتين). الإطفاء يهدر الجواهر ويربك الحلفاء. الاحتراق لا يمنعكم من كسب النقاط!\nالعلاج والإصلاح فقط بعد انتهاء الحدث.',
     'pt-BR': '🩹 NÃO CUREM: curar manda tropas de volta à cidade, onde matam Vikings no lugar dos reforços e tiram pontos dos aliados (além de gastar aceleradores).\n🔥 NÃO APAGUEM O FOGO: uma cidade em chamas indica uma derrota (não é mais atacada após 2 derrotas). Apagar gasta gemas à toa e confunde os aliados. O fogo não impede vocês de ganhar pontos!\nCurem e reparem só DEPOIS do evento.',
     fr: '🩹 NE SOIGNEZ PAS : soigner renvoie vos troupes en ville, qui tuent les Vikings à la place des renforts et privent vos alliés de leurs points d’élimination (en plus de gaspiller des accélérateurs).\n🔥 N’ÉTEIGNEZ PAS LE FEU : une ville en flammes signale qu’elle a déjà chuté (plus ciblée après 2 défaites). Éteindre coûte des gemmes pour rien et perturbe l’alliance. Brûler ne bloque aucun gain de points !\nOn soigne et on répare APRÈS l’événement.',
     en: '🩹 DO NOT HEAL: healing returns troops home, where they kill Vikings instead of reinforcements and steal allies’ points (and wastes speedups).\n🔥 DO NOT EXTINGUISH FIRES: a burning city signals a defeat (no longer targeted after 2 losses). Putting it out wastes gems and misleads allies. Burning does not stop you from earning points!\nHeal and repair only AFTER the event.',
     es: '🩹 NO CURÉIS: curar devuelve tropas a vuestra ciudad, robando bajas y puntos a los refuerzos aliados (y gastando aceleradores).\n🔥 NO APAGUÉIS EL FUEGO: una ciudad en llamas avisa que ya cayó (no recibe ataques tras 2 derrotas). Apagarlo gasta gemas y confunde a los aliados. ¡Arder no impide ganar puntos!\nSe cura y se repara DESPUÉS del evento.' },
-  { title: '🚨 VIKINGS : Dernière vérification', titleEn: '🚨 VIKINGS: Final check', titleEs: '🚨 VIKINGOS: Última comprobación', short: 'Avant le départ', tag: 'AVANT / 2', tone: 'wait',
+  { title: '🚨 VIKINGS : Dernière vérification', titleEn: '🚨 VIKINGS: Final check', titleEs: '🚨 VIKINGOS: Última comprobación', titleAr: '🚨 الفايكنغز: التحقق الأخير', short: 'Avant le départ', tag: 'AVANT / 2', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Última verificação',
+    ar: '✅ لا توجد أي قوات تابعة لكم في مدينتكم (التعزيزات: خاصة مشاة ورماة).\n✅ المدن مغطاة: المعيار ~200,000 تعزيز بالإجمالي لكل مدينة، يُعدل حسب التقارير. أبلغوا R4 بالنواقص.\n✅ الموجتان 10 و20: أفضل 3 أبطال + 80 ألف مشاة كحد أقصى. لا تحرك بدون إشارة GO من R4. الدخول إلى المقر بعد راغي؛ والعودة لنفس الحلفاء.',
     'pt-BR': '✅ Nenhuma tropa sua em casa (reforços: principalmente infantaria e arqueiros).\n✅ Cidades cobertas: referência de ~200.000 reforços NO TOTAL por cidade, ajustada pelos relatórios. Avisem o R4 sobre faltas.\n✅ Ondas 10 e 20: 3 melhores heróis + no máximo 80 mil soldados de infantaria. Não se movam sem o GO do R4. Entrem no QG depois de Raagui; voltem aos mesmos aliados.',
     fr: '✅ Aucune de vos troupes restée chez vous (renforts : surtout infanterie et archers).\n✅ Villes couvertes : repère ~200 000 renforts AU TOTAL par ville, à ajuster selon les rapports. Signalez les manques au R4.\n✅ Vagues 10 et 20 : 3 meilleurs héros + seulement 80k fantassins max. Aucun déplacement sans GO du R4. Entrée au QG après Raagui ; retour chez les mêmes alliés.',
     en: '✅ None of your own troops left at home (reinforcements: especially infantry and archers).\n✅ Cities covered: guideline ~200,000 reinforcements IN TOTAL per city, adjusted using reports. Tell the R4 about gaps.\n✅ Waves 10 & 20: 3 best heroes + only 80k infantry max. No moves without the R4’s GO. Enter HQ after Raagui; return to the same allies.',
     es: '✅ Ninguna de tus tropas en casa (refuerzos: sobre todo infantería y arqueros).\n✅ Ciudades cubiertas: referencia ~200 000 refuerzos EN TOTAL por ciudad, ajustada según informes. Avisad de las faltas al R4.\n✅ Oleadas 10 y 20 : 3 mejores héroes + solo 80k de infantería máx. Ningún movimiento sin GO del R4. Entrada al CG tras Raagui; vuelta con los mismos aliados.' },
-  { title: '🚨 VIKINGS : Comprendre les vagues 10 et 20', titleEn: '🚨 VIKINGS: Understand waves 10 and 20', titleEs: '🚨 VIKINGOS: Entender las oleadas 10 y 20', short: 'Vagues 10 et 20', tag: 'COMPRENDRE', tone: 'wait',
+  { title: '🚨 VIKINGS : Comprendre les vagues 10 et 20', titleEn: '🚨 VIKINGS: Understand waves 10 and 20', titleEs: '🚨 VIKINGOS: Entender las oleadas 10 y 20', titleAr: '🚨 الفايكنغز: فهم الموجتين 10 و20', short: 'Vagues 10 et 20', tag: 'COMPRENDRE', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Entendam as ondas 10 e 20',
+    ar: '🏰 الموجتان 10 و20: ابقوا لدى حلفائكم حتى إشارة GO استدعاء. ثم انتظروا وصول راغي إلى المقر وإشارة GO المقر للانضمام إليه. ابقوا في المقر حتى إشارة GO خروج، ثم انتظروا GO تعزيزات للعودة إلى نفس الحلفاء. يتحقق R4 من التقارير والخريطة قبل التحرك: انتهاء المؤقت لا يكفي!',
     'pt-BR': '🏰 Ondas 10 e 20: fiquem com os aliados até o GO RETIRADA. Depois, esperem Raagui chegar ao QG e o GO QG para se juntarem a ele. Fiquem no QG até o GO SAÍDA e aguardem o GO REFORÇOS para voltar aos mesmos aliados. O R4 verifica os relatórios e o mapa antes das saídas: o cronômetro zerar não basta!',
     fr: '🏰 Vagues 10 et 20 : restez chez vos alliés jusqu’au GO RAPPEL. Attendez ensuite Raagui au QG et le GO QG pour le rejoindre. Restez au QG jusqu’au GO SORTIE, puis attendez le GO RENFORTS pour retourner chez les mêmes alliés. Le R4 vérifie les rapports et la carte avant les départs : un timer terminé ne suffit pas !',
     en: '🏰 Waves 10 & 20: stay at your allies’ cities until GO RECALL. Then wait for Raagui to reach HQ and for GO HQ before joining him. Stay at HQ until GO LEAVE HQ, then wait for GO REINFORCE to return to the same allies. The R4 checks reports and the map before departures: a finished timer is not enough!',
     es: '🏰 Oleadas 10 y 20: quedaos con vuestros aliados hasta el GO RETIRADA. Esperad luego a Raagui en el CG y el GO CG para uniros. Quedaos en el CG hasta el GO SALIDA, luego esperad el GO REFUERZOS para volver con los mismos aliados. El R4 revisa informes y mapa antes de partir: ¡un temporizador terminado no basta!' },
-  { title: '🚨 VIKINGS : Lire les rapports', titleEn: '🚨 VIKINGS: Read the reports', titleEs: '🚨 VIKINGOS: Leer los informes', short: 'Les deux contrôles', tag: 'COMPRENDRE', tone: 'wait',
+  { title: '🚨 VIKINGS : Lire les rapports', titleEn: '🚨 VIKINGS: Read the reports', titleEs: '🚨 VIKINGOS: Leer los informes', titleAr: '🚨 الفايكنغز: قراءة التقارير', short: 'Les deux contrôles', tag: 'COMPRENDRE', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Leiam os relatórios',
+    ar: '🔎 بعد الهجوم، تحققوا من التقرير: 1️⃣ يجب أن يحقق لاعبك 0 تصفية في مدينتك؛ وإلا فتحققوا من القوات المتبقية أو العائدة. 2️⃣ في أعلى اليمين، الهدف هو القضاء على 100% من الفايكنغز؛ إن كان أقل، أبلغوا R4 لتعديل التعزيزات. التزموا بإشارات GO قبل نقل القوات المتمركزة.',
     'pt-BR': '🔎 Após um ataque, confiram o relatório: 1️⃣ Seu jogador deve ter 0 eliminações na sua cidade; caso contrário, verifique as tropas que ficaram ou voltaram para casa. 2️⃣ No canto superior direito, a meta é 100% dos Vikings eliminados no total; se for menos, avisem o R4 para ajustar os reforços. Respeitem os GO antes de mover tropas já posicionadas.',
     fr: '🔎 Après une attaque, contrôlez le rapport : 1️⃣ Votre joueur doit faire 0 élimination dans votre ville ; sinon, vérifiez les troupes restées ou revenues chez vous. 2️⃣ En haut à droite, visez 100 % des Vikings éliminés au total ; en dessous, signalez la ville au R4 pour ajuster les renforts. Respectez les GO pour déplacer les troupes déjà en place.',
     en: '🔎 After an attack, check the report: 1️⃣ Your player should have 0 kills in your city; otherwise, check for troops left at home or returning there. 2️⃣ At the top right, aim for 100% of Vikings killed overall; if lower, tell the R4 so reinforcements can be adjusted. Follow the GO signals before moving troops already in position.',
     es: '🔎 Tras un ataque, revisad el informe: 1️⃣ Tu jugador debe hacer 0 bajas en tu ciudad; si no, revisa las tropas que quedaron o volvieron. 2️⃣ Arriba a la derecha, buscad el 100 % de vikingos eliminados en total; si es menos, avisad al R4 para ajustar refuerzos. Respetad los GO para mover tropas ya colocadas.' },
-  { title: '🚨 VIKINGS : Récapitulatif de l’événement', titleEn: '🚨 VIKINGS: Event recap', titleEs: '🚨 VIKINGOS: Resumen del evento', short: '22 et 24/09 · 19 UTC', tag: 'RÉCAP', tone: 'wait',
+  { title: '🚨 VIKINGS : Récapitulatif de l’événement', titleEn: '🚨 VIKINGS: Event recap', titleEs: '🚨 VIKINGOS: Resumen del evento', titleAr: '🚨 الفايكنغز: ملخص الحدث', short: '22 et 24/09 · 19 UTC', tag: 'RÉCAP', tone: 'wait',
     titlePtBr: '🚨 VIKINGS: Resumo do evento',
+    ar: '🕒 22/09 و 24/09 — 19 UTC\n💡 أكدوا تواجدكم بالإنترنت.\n\n1. احتفظوا بأفضل 3 أبطال في مركز القيادة.\n2. عززوا الحلفاء بكل قواتكم، خاصة المشاة والرماة.\n3. الموجتان 10 و20: أرسلوا أفضل 3 أبطال + 80 ألف مشاة من أعلى مستوى فقط.\n\n🐾 فعلوا مكافآت الحيوانات الأليفة ووزعوا القوات عبر الفايكنغز ← الأعضاء قبل 20 دقيقة.\n\nأي أسئلة؟ R4/R5.',
     'pt-BR': '🕒 22/09 e 24/09 — 19 UTC\n💡 Confirmem se estarão online.\n\n1. Mantenham seus 3 melhores heróis no posto de comando.\n2. Reforcem aliados com TODAS as tropas, principalmente infantaria e arqueiros.\n3. Ondas 10 e 20: enviem seus 3 melhores heróis + apenas 80 mil soldados de infantaria do nível mais alto.\n\n🐾 Ativem os bônus de mascotes e distribuam tropas em Vikings → Membros 20 min antes.\n\nDúvidas? R4/R5.',
     fr: '🕒 22/09 et 24/09 — 19 UTC\n💡 Confirmez votre présence en ligne.\n\n1. Gardez vos 3 meilleurs héros au poste de commandement.\n2. Renforcez vos alliés avec TOUTES vos troupes, surtout infanterie et archers.\n3. Vagues 10 et 20 : envoyez vos 3 meilleurs héros + seulement 80k fantassins du niveau le plus élevé.\n\n🐾 Activez les bonus de familiers et répartissez les troupes via Vikings → Membres 20 min avant.\n\nQuestions ? R4/R5.',
     en: '🕒 22/09 & 24/09 — 19 UTC\n💡 Confirm if you will be online.\n\n1. Keep your 3 best heroes at the Command Center.\n2. Reinforce allies with ALL troops—especially infantry and archers.\n3. Waves 10 & 20: send your 3 best heroes + only 80k highest-level infantry.\n\n🐾 Activate pet bonuses and distribute troops via Vikings → Members 20 min before.\n\nQuestions? Contact R4/R5.',
@@ -56,68 +65,79 @@ const explanationMessages = [
 ];
 
 const coordinationMessages = [
-  { title: 'Consignes avant les vagues', titleEn: 'Instructions before the waves', titleEs: 'Instrucciones antes de las oleadas', short: 'Les consignes', tag: 'PRÉPARATION', tone: 'wait',
+  { title: 'Consignes avant les vagues', titleEn: 'Instructions before the waves', titleEs: 'Instrucciones antes de las oleadas', titleAr: 'تعليمات قبل الموجات', short: 'Les consignes', tag: 'PRÉPARATION', tone: 'wait',
     titlePtBr: 'Instruções antes das ondas',
+    ar: '⚔️ الموجتان 10 و20: اتبعوا إشارات GO لكل تحرك! لا تسحبوا التعزيزات مبكراً: قد تفوت هجوم الفايكنغز على مدينة حليفكم. مؤقتات الوصول خادعة: راجعوا تقارير المعركة والخريطة. انتهاء المؤقت وحده لا يعني إمكانية المغادرة!',
     'pt-BR': '⚔️ Ondas 10 e 20: sigam meus GO a cada movimento! Não retirem reforços cedo demais: eles podem perder o ataque dos Vikings na cidade aliada. Os cronômetros de chegada enganam: confiram os relatórios de batalha e o mapa. O cronômetro zerar não basta para sair!',
     fr: '⚔️ Vagues 10 et 20 : suivez mes GO pour chaque déplacement ! Ne retirez pas vos renforts trop tôt : ils pourraient manquer l’attaque des Vikings chez votre allié. Les timers d’arrivée sont trompeurs : vérifiez les rapports de combat et la carte. Un timer terminé ne suffit pas pour partir !',
     en: '⚔️ Waves 10 & 20: wait for my GO before each move! Do not recall reinforcements too early: they could miss the Viking attack at your ally’s city. Arrival timers are misleading: check battle reports and the map. A finished timer alone does not mean you can leave!',
     es: '⚔️ Oleadas 10 y 20: ¡seguid mis GO en cada movimiento! No retiréis vuestros refuerzos antes de tiempo: podrían perderse el ataque vikingo en la ciudad aliada. Los temporizadores de llegada engañan: revisad los informes y el mapa. ¡Un temporizador terminado no basta para marcharse!' },
-  { title: 'Organisation au QG', titleEn: 'HQ organization', titleEs: 'Organización en el CG', short: 'Organisation au QG', tag: 'PRÉPARATION', tone: 'wait',
+  { title: 'Organisation au QG', titleEn: 'HQ organization', titleEs: 'Organización en el CG', titleAr: 'التنظيم في المقر الرئيسي', short: 'Organisation au QG', tag: 'PRÉPARATION', tone: 'wait',
     titlePtBr: 'Organização no QG',
+    ar: '🏰 في الموجتين 10 و20، ننتظر وصول راغي إلى المقر قبل الانضمام إليه. سأعطي إشارة GO للدخول، ثم GO للخروج بعد الهجوم. بعد ذلك، عودوا لتعزيز نفس الحليف السابق. لا تحرك بدون إشارتي!',
     'pt-BR': '🏰 Nas ondas 10 e 20, esperamos Raagui chegar ao QG antes de nos juntarmos a ele. Vou dar o GO para entrar e o GO para sair após o ataque. Depois, voltem a reforçar o mesmo aliado de antes. Nenhum movimento sem meu sinal!',
     fr: '🏰 Pour les vagues 10 et 20, nous attendons que Raagui soit arrivé au QG avant de le rejoindre. Je donnerai le GO pour entrer, puis le GO pour sortir après l’attaque. Ensuite, retournez renforcer le même allié qu’avant. Aucun déplacement sans mon signal !',
     en: '🏰 For waves 10 & 20, we wait until Raagui has arrived at HQ before joining him. I will give the GO to enter, then the GO to leave after the attack. Afterwards, return to reinforce the same ally as before. No moves without my signal!',
     es: '🏰 Para las oleadas 10 y 20, esperamos a que Raagui llegue al CG antes de unirnos. Daré el GO para entrar, luego el GO para salir tras el ataque. Después, volved a reforzar al mismo aliado que antes. ¡Ningún movimiento sin mi señal!' },
-  { title: 'Rappel avant le déplacement', titleEn: 'Reminder before moving', titleEs: 'Recordatorio antes del movimiento', short: 'Maintenir les renforts', tag: 'ATTENDRE', tone: 'wait',
+  { title: 'Rappel avant le déplacement', titleEn: 'Reminder before moving', titleEs: 'Recordatorio antes del movimiento', titleAr: 'تذكير قبل التحرك', short: 'Maintenir les renforts', tag: 'ATTENDRE', tone: 'wait',
     titlePtBr: 'Lembrete antes de se mover',
+    ar: '✋ أبقوا تعزيزاتكم لدى حلفائكم! لا تعتمدوا فقط على المؤقتات: الهجوم قد يكون في الطريق. نحن نتحقق من التقارير والخريطة قبل التحرك. انتظروا إشارة GO مني لسحب قواتكم.',
     'pt-BR': '✋ Mantenham os reforços nas cidades dos aliados! Não confiem só nos cronômetros: o ataque ainda pode estar a caminho. Estamos verificando os relatórios e o mapa antes de nos mover. Esperem meu GO para retirar as tropas.',
     fr: '✋ Gardez vos renforts chez vos alliés ! Ne vous fiez pas uniquement aux timers : l’attaque peut encore être en route. Nous vérifions les rapports et la carte avant de bouger. Attendez mon GO pour rappeler vos troupes.',
     en: '✋ Keep your reinforcements at your allies’ cities! Do not rely only on timers: the attack may still be on its way. We are checking reports and the map before moving. Wait for my GO to recall your troops.',
     es: '✋ ¡Mantened vuestros refuerzos con vuestros aliados! No os fiéis solo de los temporizadores: el ataque aún puede estar en camino. Revisamos los informes y el mapa antes de movernos. Esperad mi GO para retirar vuestras tropas.' },
-  { title: 'Maintenir les renforts', titleEn: 'Keep reinforcements in place', titleEs: 'Mantener los refuerzos',
+  { title: 'Maintenir les renforts', titleEn: 'Keep reinforcements in place', titleEs: 'Mantener los refuerzos', titleAr: 'الحفاظ على التعزيزات',
     titlePtBr: 'Mantenham os reforços',
+    ar: '✋ أبقوا تعزيزاتكم في مدن الحلفاء. انتظروا إشارة GO استدعاء مني: انتهاء المؤقت لا يؤكد نهاية الهجوم.',
     'pt-BR': '✋ Mantenham os reforços nas cidades dos aliados. Esperem meu GO RETIRADA: o cronômetro zerar não confirma o fim do ataque.',
     fr: '✋ Gardez vos renforts chez vos alliés. Attendez mon GO RAPPEL : un timer terminé ne confirme pas la fin de l’attaque.',
     en: '✋ Keep your reinforcements at your allies’ cities. Wait for my GO RECALL: a finished timer does not confirm the attack is over.',
     es: '✋ Mantened los refuerzos con vuestros aliados. Esperad mi GO RETIRADA: un temporizador terminado no confirma el fin del ataque.' },
-  { title: 'GO pour retirer les renforts', titleEn: 'GO RECALL', titleEs: 'GO RETIRADA', short: 'GO rappel', tag: 'RAPPELER', tone: 'go',
+  { title: 'GO pour retirer les renforts', titleEn: 'GO RECALL', titleEs: 'GO RETIRADA', titleAr: 'إشارة GO لسحب التعزيزات', short: 'GO rappel', tag: 'RAPPELER', tone: 'go',
     titlePtBr: 'GO RETIRADA',
+    ar: '🟢 GO استدعاء! اسحبوا تعزيزاتكم من مدن الحلفاء. 🛑 لا تدخلوا المقر بعد: ننتظر وصول راغي وإشارة GO القادمة مني!',
     'pt-BR': '🟢 GO RETIRADA! Retirem os reforços das cidades dos aliados. 🛑 Não entrem no QG ainda: estamos esperando Raagui chegar e meu próximo GO!',
     fr: '🟢 GO RAPPEL ! Retirez vos renforts de chez vos alliés. 🛑 N’entrez pas encore au QG : nous attendons l’arrivée de Raagui et mon prochain GO !',
     en: '🟢 GO RECALL! Recall your reinforcements from your allies’ cities. 🛑 Do not enter HQ yet: wait for Raagui to arrive and for my next GO!',
     es: '🟢 ¡GO RETIRADA! Retirad los refuerzos de vuestros aliados. 🛑 ¡No entréis al CG todavía: esperamos la llegada de Raagui y mi próximo GO!' },
-  { title: 'GO pour entrer au QG', titleEn: 'GO HQ', titleEs: 'GO CG', short: 'GO entrée QG', tag: 'REJOINDRE', tone: 'go',
+  { title: 'GO pour entrer au QG', titleEn: 'GO HQ', titleEs: 'GO CG', titleAr: 'إشارة GO لدخول المقر', short: 'GO entrée QG', tag: 'REJOINDRE', tone: 'go',
     titlePtBr: 'GO QG',
+    ar: '🟢 GO المقر! وصل راغي: أرسلوا تعزيزاتكم إلى المقر الآن! ابقوا حتى إشارة GO للخروج مني، حتى لو بدا أن المؤقت قد انتهى.',
     'pt-BR': '🟢 GO QG! Raagui chegou: enviem seus reforços ao QG agora! Fiquem até meu GO de saída, mesmo que o cronômetro pareça ter zerado.',
     fr: '🟢 GO QG ! Raagui est arrivé : envoyez maintenant vos renforts au QG ! Restez jusqu’à mon GO de sortie, même si le timer semble terminé.',
     en: '🟢 GO HQ! Raagui has arrived: send your reinforcements to HQ now! Stay until my GO to leave, even if the timer appears to have finished.',
     es: '🟢 ¡GO CG! Raagui ha llegado: ¡enviad ya vuestros refuerzos al CG! Quedaos hasta mi GO de salida, aunque el temporizador parezca terminado.' },
-  { title: 'Attendre l’attaque au QG', titleEn: 'Wait for the HQ attack', titleEs: 'Esperar el ataque en el CG', short: 'Tenir le QG', tag: 'ATTENDRE', tone: 'stop',
+  { title: 'Attendre l’attaque au QG', titleEn: 'Wait for the HQ attack', titleEs: 'Esperar el ataque en el CG', titleAr: 'انتظار الهجوم في المقر', short: 'Tenir le QG', tag: 'ATTENDRE', tone: 'stop',
     titlePtBr: 'Esperem o ataque no QG',
+    ar: '🛑 ابقوا في المقر! لا تسحبوا قواتكم بناءً على المؤقت فقط. ننتظر تأكيد الهجوم في التقارير وعلى الخريطة. سأعطي إشارة GO عندما يحين وقت الخروج.',
     'pt-BR': '🛑 Fiquem no QG! Não retirem as tropas com base apenas no cronômetro. Estamos esperando a confirmação do ataque nos relatórios e no mapa. Vou dar o GO quando puderem sair.',
     fr: '🛑 Restez au QG ! Ne retirez pas vos troupes sur la seule base du timer. Nous attendons la confirmation de l’attaque dans les rapports et sur la carte. Je donne le GO dès que vous pouvez sortir.',
     en: '🛑 Stay at HQ! Do not recall your troops based only on the timer. We are waiting for confirmation of the attack in reports and on the map. I will give the GO when you can leave.',
     es: '🛑 ¡Quedaos en el CG! No retiréis vuestras tropas basándoos solo en el temporizador. Esperamos la confirmación del ataque en los informes y el mapa. Daré el GO en cuanto podáis salir.' },
-  { title: 'Tenir le QG', titleEn: 'Hold HQ', titleEs: 'Mantener la posición en el CG',
+  { title: 'Tenir le QG', titleEn: 'Hold HQ', titleEs: 'Mantener la posición en el CG', titleAr: 'الثبات في المقر',
     titlePtBr: 'Mantenham a posição no QG',
+    ar: '🛑 ابقوا في المقر حتى إشارة GO خروج مني. ننتظر تأكيد الهجوم في التقارير وعلى الخريطة.',
     'pt-BR': '🛑 Fiquem no QG até meu GO SAÍDA. Estamos esperando a confirmação do ataque nos relatórios e no mapa.',
     fr: '🛑 Restez au QG jusqu’à mon GO SORTIE. Nous attendons la confirmation de l’attaque dans les rapports et sur la carte.',
     en: '🛑 Stay at HQ until my GO LEAVE HQ. We are waiting for confirmation of the attack in reports and on the map.',
     es: '🛑 Quedaos en el CG hasta mi GO SALIDA. Esperamos la confirmación del ataque en los informes y en el mapa.' },
-  { title: 'GO pour sortir du QG', titleEn: 'GO LEAVE HQ', titleEs: 'GO SALIDA CG', short: 'GO sortie QG', tag: 'SORTIR', tone: 'go',
+  { title: 'GO pour sortir du QG', titleEn: 'GO LEAVE HQ', titleEs: 'GO SALIDA CG', titleAr: 'إشارة GO للخروج من المقر', short: 'GO sortie QG', tag: 'SORTIR', tone: 'go',
     titlePtBr: 'GO SAÍDA QG',
+    ar: '🟢 GO خروج المقر! تم تأكيد الهجوم، استدعوا قواتكم الآن. استعدوا للعودة إلى نفس الحليف الذي كنتم تعززونه سابقاً!',
     'pt-BR': '🟢 GO SAÍDA QG! Ataque confirmado, retirem suas tropas agora. Preparem-se para voltar ao mesmo aliado que estavam reforçando antes!',
     fr: '🟢 GO SORTIE QG ! L’attaque est confirmée, rappelez vos troupes maintenant. Préparez-vous à retourner chez le même allié que vous renforciez avant !',
     en: '🟢 GO LEAVE HQ! The attack is confirmed: recall your troops now. Get ready to return to the same ally you were reinforcing before!',
     es: '🟢 ¡GO SALIDA CG! Ataque confirmado, retirad vuestras tropas ahora. ¡Preparaos para volver con el mismo aliado que reforzabais antes!' },
-  { title: 'GO pour renforcer à nouveau', titleEn: 'GO REINFORCE', titleEs: 'GO REFUERZOS', short: 'GO renforts', tag: 'RENFORCER', tone: 'go',
+  { title: 'GO pour renforcer à nouveau', titleEn: 'GO REINFORCE', titleEs: 'GO REFUERZOS', titleAr: 'إشارة GO للتعزيز مجدداً', short: 'GO renforts', tag: 'RENFORCER', tone: 'go',
     titlePtBr: 'GO REFORÇOS',
+    ar: '🟢 GO تعزيزات! بمجرد عودة قواتكم، أرسلوها إلى نفس الحليف كما كان. تحركوا بسرعة لتكونوا جاهزين قبل الهجوم القادم! 🛡️',
     'pt-BR': '🟢 GO REFORÇOS! Assim que suas tropas voltarem, enviem-nas ao mesmo aliado de antes. Sejam rápidos para estar em posição antes do próximo ataque! 🛡️',
     fr: '🟢 GO RENFORTS ! Dès que vos troupes sont rentrées, renvoyez-les chez le même allié qu’avant. Faites vite pour être en place avant la prochaine attaque ! 🛡️',
     en: '🟢 GO REINFORCE! As soon as your troops return, send them back to the same ally as before. Move quickly to be in position before the next attack! 🛡️',
     es: '🟢 ¡GO REFUERZOS! En cuanto vuelvan vuestras tropas, reenviadlas al mismo aliado que antes. ¡Daos prisa para estar listos antes del siguiente ataque! 🛡️' },
-  { title: 'Rappel : Ni soin ni extinction', titleEn: 'Reminder: No heal, do not extinguish', titleEs: 'Recordatorio: No curar ni apagar fuego', short: 'Ni soin ni feu', tag: 'RAPPEL', tone: 'stop',
+  { title: 'Rappel : Ni soin ni extinction', titleEn: 'Reminder: No heal, do not extinguish', titleEs: 'Recordatorio: No curar ni apagar fuego', titleAr: 'تذكير: لا علاج ولا إطفاء', short: 'Ni soin ni feu', tag: 'RAPPEL', tone: 'stop',
     titlePtBr: 'Lembrete: Não curem nem apaguem o fogo',
+    ar: '⚠️ تذكير: لا تعالجوا أي قوات في المستوصف (ستعود لمدينتكم وتخطف نقاط التعزيز من الحلفاء) ولا تطفئوا النيران إذا احترقت مدينتكم (هدر للجواهر وعلامة للحلفاء). اتركوا كل شيء كما هو حتى نهاية الحدث!',
     'pt-BR': '⚠️ LEMBRETE: NÃO curem tropas na enfermaria (elas voltam para casa e tiram pontos dos reforços aliados) e NÃO apaguem o fogo se a cidade estiver queimando (gasta gemas e serve de aviso aos aliados). Deixem tudo como está até o fim do evento!',
     fr: '⚠️ RAPPEL : Ne soignez AUCUNE troupe dans l’infirmerie (elles voleraient les points des renforts chez vous) et n’éteignez PAS le feu si votre ville brûle (gaspillage de gemmes, et cela sert de repère aux alliés). Laissez tout en l’état jusqu’à la fin de l’événement !',
     en: '⚠️ REMINDER: Do NOT heal any troops in the infirmary (they will return home and steal points from allies) and do NOT extinguish fires if your city burns (wastes gems and misleads allies). Leave everything as is until the event ends!',
@@ -440,6 +460,85 @@ const uiTranslations = {
     copyUnavailable: 'Portapapeles no disponible: por favor, selecciona el texto para copiarlo.',
     footerContent: '<span>KINGSHOT / VIKINGS</span><span>Los informes. El mapa. Y luego la señal de GO.</span>',
     noscript: 'Activa JavaScript para ver y copiar los mensajes rápidos.'
+  },
+  ar: {
+    pageTitle: 'الفايكنغز — مركز القيادة',
+    metaDesc: 'استراتيجية الفايكنغز: جهز مدينتك، افهم النقاط، وزع التعزيزات ونسق الموجتين 10 و20.',
+    skip: 'الانتقال إلى الرسائل',
+    langAria: 'لغة الموقع',
+    introEyebrow: 'تنسيق التحالف',
+    introH1: 'كل تحرك.<br><em>في الإشارة المناسبة.</em>',
+    introCopy: 'الاستراتيجية والرسائل للحفاظ على تزامن التحالف خلال الفايكنغز.',
+    waveAria: 'الموجتان 10 و20',
+    waveMarkSpan: 'موجات المقر',
+    waveMarkStrong: '10 <i>&</i> 20',
+    waveMarkSmall: 'قاعدة واحدة: انتظر إشارة الانطلاق (GO).',
+    pageNavAria: 'التنقل في الدليل',
+    navCityGuide: 'تجهيز المدن',
+    navReinforcements: 'من نعزز؟',
+    navPoints: 'فهم النقاط',
+    navFireHeal: 'العلاج والنيران',
+    navMessages: 'رسائل للنسخ',
+    cityEyebrow: 'استراتيجية المدن',
+    cityTitle: 'أبطالك في مدينتك.<br> قواتك لدى حلفائك.',
+    cityLead: 'يرسل كل عضو قواته لتعزيز الآخرين ويتلقى تعزيزات للدفاع عن مدينته. الهدف: حماية التحالف بأكمله وتمكين الجميع من كسب النقاط.',
+    card1Eyebrow: '01 / تجهيز',
+    card1Title: 'احتفظ بأفضل 3 أبطال لديك',
+    card1Body: 'اترك أفضل ثلاثة أبطال في مدينتك. في <strong>مركز القيادة</strong>، قم بتثبيتهم لمنع إرسالهم بالخطأ مع مسيراتك.',
+    card2Eyebrow: '02 / أساسي',
+    card2Title: 'أخرج جميع قواتك',
+    card2Body: '<p>أرسل قواتك كتعزيزات لحلفائك واجعل تعزيزاتهم تدافع عن مدينتك. <strong>الاحتفاظ بأبطالك لا يعني إبقاء قواتك في مدينتك.</strong></p><p>القوات المتبقية في مدينتك قد تقتل الفايكنغز بدلاً من التعزيزات: مما يحرم حلفاءك من فرص كسب النقاط.</p>',
+    card3Eyebrow: '03 / توزيع',
+    card3Title: 'اختر من تعزز',
+    card3Body: '<p>تتيح قائمة <strong>الأعضاء</strong> في الحدث معرفة من متصل، ومن يحتاج لتعزيزات، ومن تعززه بالفعل.</p><p><a href="#reinforcements">شاهد كيفية استخدام هذه القائمة ←</a></p>',
+    card4Eyebrow: '04 / التقدير',
+    card4Title: 'استهدف 200,000 تعزيز لكل مدينة',
+    card4Body: 'هذا هو معيار تحالفنا للصمود حتى النهاية: <strong>200,000 إجمالي في المدينة الواحدة</strong>، وليس 200,000 من كل شخص يعززها.<p>عدل ذلك حسب قوة القوات والصعوبة والتقارير. المدينة المحمية جيداً تفسح المجال لمدينة أقل تعزيزاً.</p>',
+    reinfEyebrow: 'في اللعبة / صفحة الحدث',
+    reinfTitle: 'من متصل؟ من أعزز؟ من نساعد؟',
+    reinfPath: 'افتح حدث <strong>الفايكنغز</strong> ← اضغط على <strong>الأعضاء</strong>.',
+    reinfLead: 'تمنحك هذه القائمة نظرة عامة على التحالف. قبل إرسال أي مسيرة، طابق هذه المعلومات الثلاث:',
+    reinfCheck1: '<strong>من متصل بالإنترنت؟</strong><p>تحقق من حالة اتصال كل عضو. حدد اللاعبين المتصلين لمساعدتهم كأولوية عندما تنقصهم التعزيزات.</p>',
+    reinfCheck2: '<strong>من لديه تعزيزات جيدة بالفعل؟</strong><p>قارن مستوى التعزيزات بين المدن. معيارنا هو <strong>200,000 جندي تعزيز إجمالاً لكل مدينة</strong>: ابحث أولاً عن المدن ذات التعزيزات القليلة أو المعدومة، ثم عدل حسب التقارير.</p>',
+    reinfCheck3: '<strong>من الذي أعززه بالفعل؟</strong><p>راجع التعزيزات التي أرسلتها في نفس القائمة. حدد وجهاتها قبل اختيار إرسال مسيرة أخرى: الهدف هو توزيع المساعدة بين الأعضاء.</p>',
+    reinfBoxTitle: 'كيف تختار وجهتك التالية؟',
+    reinfBoxBody: '<p><strong>أولاً، عضو متصل تنقصه التعزيزات.</strong> إذا كان الأعضاء المتصلون مغطين جيداً، ساعد المدن الأخرى المحتاجة. تجنب تركيز كل المسيرات على مدينة واحدة بينما تبقى أخرى دون مساعدة.</p><p>على سبيل المثال، بين عضوين متصلين، أحدهما لديه 80,000 تعزيز والآخر 200,000، اكمل الأول ذو 80,000 كأولوية، إلا إذا كانت هناك تعليمات من R4 أو تقرير يوضح حاجة مختلفة.</p>',
+    reinfTakeaway: 'عد بانتظام إلى الحدث ← الأعضاء لمتابعة التوزيع. لنقل تعزيزات موجودة بالفعل، تحقق من التقارير والتزم بإشارات GO من R4.',
+    pointsEyebrow: 'لماذا تفرغ مدينتك؟',
+    pointsTitle: 'دفاع واحد، ومصدران للنقاط.',
+    pointsBody: '<p>تكسب نقاطاً مقابل الفايكنغز الذين يُقتلون في مدينتك، بما في ذلك من قِبل التعزيزات. ويمكن لقواتك أيضاً كسب نقاط التعزيز لدى حلفائك.</p><p><strong>دفاع الآخرين عن مدينتك لا يسلبك نقاط الدفاع الخاصة بك.</strong> ولكن إذا قامت قواتك بالقتل، فإنها تقلل من نقاط التعزيز المتاحة لمن جاء لمساعدتك.</p>',
+    pointsExTitle: 'مثال: القضاء على 1,000 فايكنغ',
+    pointsExBody: '<p><strong>مدينتك فارغة من قواتك:</strong> التعزيزات تقضي على 1,000 فايكنغ. تحصل أنت على نقاط الدفاع المقابلة؛ ويكسب الحلفاء نقاطاً لتصفياتهم.</p><p><strong>قواتك تقضي على 300:</strong> يتبقى 700 فايكنغ فقط لتقضي عليهم التعزيزات. مع نفس إجمالي 1,000 فايكنغ مقتول، يحصل حلفاؤك على فرص أقل لكسب النقاط.</p><small>مثال توضيحي لعدد التصفيات، وليس جدولاً للنقاط. تعتمد قيمة النقاط على الموجة ومستوى الصعوبة.</small>',
+    fireHealEyebrow: 'خلال الحدث / العلاج والنيران',
+    fireHealTitle: 'لا تعالج. لا تطفئ النيران.',
+    fireHealCol1: '<strong>لماذا لا تعالج في المستوصف؟</strong><p>عندما تعالج القوات، فإنها تعود فوراً إلى مدينتك. وتقوم بقتل الفايكنغز بدلاً من تعزيزات حلفائك، مما يحرمهم من نقاط التصفية. بالإضافة إلى ذلك، هذا يهدر تسريعات: انتظر نهاية الحدث للعلاج بهدوء.</p>',
+    fireHealCol2: '<strong>لماذا تترك مدينتك تحترق؟</strong><p>المدينة المشتعلة تشير للتحالف إلى أنها تعرضت للهزيمة بالفعل (بعد هزيمتين، لا تُستهدف بعد ذلك). إطفاء النيران يكلف جواهر بلا فائدة ويربك التعزيزات. كما أن الاحتراق لا يمنعك من كسب جميع نقاطك لدى الحلفاء وفي المقر!</p>',
+    fireHealTakeaway: 'التصرف الصحيح: اتركها تحترق ولا تلمس المستوصف. العلاج والإصلاحات تتم بعد الحدث!',
+    reportEyebrow: '05 / التحقق بعد الهجوم',
+    reportTitle: 'التقرير يقدم إجابتين.',
+    reportCol1: '<strong>هل قتلت قواتي الخاصة أي فايكنغز؟</strong><p>انظر إلى سطر لاعبك في تفاصيل التصفيات. الهدف هو <strong>0 تصفية من قواتك الخاصة في مدينتك</strong>. إذا رأيت أي تصفيات، فتحقق من القوات المتبقية أو العائدة وأعد إرسالها كتعزيزات وفقاً للتعليمات.</p>',
+    reportCol2: '<strong>هل تم القضاء على 100% من الفايكنغز؟</strong><p>تحقق من النسبة المئوية في أعلى يمين التقرير. الهدف هو <strong>100% تصفيات إجمالاً بواسطة المدافعين</strong>. وإذا كانت أقل، أبلغ عن المدينة لتعديل تعزيزاتها مع R4.</p>',
+    reportTakeaway: 'النتيجة المثالية: قواتك الخاصة تحقق 0 تصفية في مدينتك، والتعزيزات تحقق 100%.',
+    citySourceNote: 'التعليمات ومعيار 200,000 تعزيز: استراتيجية تحالفنا. آلية النقاط: <a href="https://kingshotguides.com/guide/viking-vengeance-expert-guide-beginner-to-advanced/">دليل مجتمع Kingshot Guides</a>. للموجتين 10 و20، اتبع إشارات GO من R4 أدناه.',
+    asideEyebrow: 'خطة المعركة',
+    asideTitle: 'لا انطلاق <br>دون إشارة.',
+    strategyStep1: '<strong>الحفاظ على التعزيزات</strong><p>تحقق من التقارير والخريطة قبل مغادرة الحلفاء.</p>',
+    strategyStep2: '<strong>الاستدعاء عند إشارة GO</strong><p>اسحب التعزيزات، ثم انتظر وصول راغي إلى المقر الرئيسي.</p>',
+    strategyStep3: '<strong>الانضمام إلى المقر الرئيسي</strong><p>ادخل عند إشارة GO الثانية وابقى حتى تأكيد الهجوم.</p>',
+    strategyStep4: '<strong>العودة إلى الحليف</strong><p>عند إشارة GO للخروج، استدعِ القوات، ثم عزز نفس الحليف عند إشارة GO للتعزيزات.</p>',
+    warningBody: '<strong>المؤقت ليس دليلاً قاطعاً.</strong>انتهاء المؤقت لا يكفي: تحقق من تقارير المعركة والخريطة.',
+    asideSourceNote: 'استراتيجية التحالف، مأخوذة من تعليمات R4 المقدمة.',
+    messagesEyebrow: 'جاهزة للدردشة',
+    messagesTitle: 'رسائل للنسخ',
+    groupAria: 'توقيت الرسائل',
+    groupExplanations: '1. الفهم والاستعداد',
+    groupCoordination: '2. خلال الحدث',
+    groupExplanationsHint: 'اختر موضوعاً لفهم الاستراتيجية، ثم انسخ الرسالة بالعربية أو الإنجليزية.',
+    groupCoordinationHint: 'رسائل الموجتين 10 و20 والتذكيرات بالترتيب: التعليمات، التنظيم، الانتظار، إشارات GO والتذكيرات. انسخ كل واحدة في الوقت المناسب.',
+    copyToast: (lang) => `تم نسخ الرسالة بـ ${lang === 'ar' ? 'العربية' : lang.toUpperCase()}. جاهزة للصق في الدردشة!`,
+    copyUnavailable: 'النسخ غير متاح: حدد النص لنسخه يدويًا.',
+    footerContent: '<span>KINGSHOT / VIKINGS</span><span>التقارير. الخريطة. ثم إشارة الانطلاق (GO).</span>',
+    noscript: 'يرجى تفعيل JavaScript لعرض ونسخ الرسائل السريعة.'
   }
 };
 
@@ -459,7 +558,7 @@ let messages = explanationMessages;
 let language = 'fr';
 try {
   const saved = localStorage.getItem('kingshot_lang');
-  if (saved && ['fr', 'en', 'es', 'pt-BR'].includes(saved)) {
+  if (saved && ['fr', 'en', 'es', 'pt-BR', 'ar'].includes(saved)) {
     language = saved;
   }
 } catch {}
@@ -468,6 +567,7 @@ let toastTimer;
 const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>';
 
 function getMessageTitle(item, lang) {
+  if (lang === 'ar' && item.titleAr) return item.titleAr;
   if (lang === 'pt-BR' && item.titlePtBr) return item.titlePtBr;
   if (lang === 'en' && item.titleEn) return item.titleEn;
   if (lang === 'es' && item.titleEs) return item.titleEs;
@@ -478,7 +578,12 @@ function messageCard(item, i) {
   const currentTitle = getMessageTitle(item, language);
 
   let copyButtonsHtml = '';
-  if (language === 'fr') {
+  if (language === 'ar') {
+    copyButtonsHtml = `
+      <button type="button" class="copy-small" data-copy="${i}" data-copy-lang="ar" aria-label="نسخ بالعربية: ${currentTitle}">${copyIcon} العربية</button>
+      <button type="button" class="copy-small" data-copy="${i}" data-copy-lang="en" aria-label="نسخ بالإنجليزية: ${currentTitle}">${copyIcon} EN</button>
+    `;
+  } else if (language === 'fr') {
     copyButtonsHtml = `
       <button type="button" class="copy-small" data-copy="${i}" data-copy-lang="fr" aria-label="Copier en français : ${currentTitle}">${copyIcon} FR</button>
       <button type="button" class="copy-small" data-copy="${i}" data-copy-lang="en" aria-label="Copier en anglais : ${currentTitle}">${copyIcon} EN</button>
@@ -501,7 +606,9 @@ function messageCard(item, i) {
 
   const copyGroupAria = language === 'fr'
     ? `Copier : ${currentTitle}`
-    : (['es', 'pt-BR'].includes(language) ? `Copiar: ${currentTitle}` : `Copy: ${currentTitle}`);
+    : (language === 'ar'
+      ? `نسخ: ${currentTitle}`
+      : (['es', 'pt-BR'].includes(language) ? `Copiar: ${currentTitle}` : `Copy: ${currentTitle}`));
 
   return `<article class="message-card">
     <div class="message-row">
@@ -519,6 +626,7 @@ function updateStaticUI() {
   if (!t) return;
 
   document.documentElement.lang = language;
+  document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   document.title = t.pageTitle;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = t.metaDesc;
