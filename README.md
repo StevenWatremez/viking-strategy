@@ -2,7 +2,7 @@
 
 Page statique adaptée au mobile : stratégie des Vikings et messages traduits en français, anglais, espagnol, portugais du Brésil, arabe, polonais et turc, avec traduction intégrale du site et copie en un clic.
 
-- **Comprendre et se préparer** : neuf messages dans leur ordre logique (principe et points avec exemple, préparation, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement).
+- **Comprendre et se préparer** : dix messages dans leur ordre logique (principe et points avec exemple, préparation de la ville, sortie des troupes, préparation collective, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement).
 - **Pendant l’événement** : onze messages (consignes et GO des vagues 10 et 20 avec leurs rappels, ainsi qu'un rappel final sur l'interdiction de soigner et d'éteindre le feu).
 
 Le sélecteur de langue situé dans la barre supérieure (`FR` / `EN` / `ES` / `PT-BR` / `العربية` / `PL` / `TR`) traduit l'ensemble du site et des messages, et adapte la direction d'écriture (LTR / RTL). Sur chaque carte de message, les boutons de copie s'adaptent selon la langue choisie :
@@ -15,6 +15,8 @@ Le sélecteur de langue situé dans la barre supérieure (`FR` / `EN` / `ES` / `
 - En **EN** : bouton de copie **EN** uniquement
 
 Les consignes reprennent les captures et indications fournies par le R4. Les 200 000 renforts sont un repère de son alliance, à ajuster selon les rapports. L’explication des points renvoie au guide communautaire cité sur la page ; l’exemple porte sur des éliminations, sans inventer de barème de points. Copier un message ne déclenche aucun envoi dans Kingshot.
+
+La section **Sortir ses troupes** explique la priorité infanterie/cavalerie, puis la sortie des archers selon la capacité des marches et la couverture défensive. Le test au niveau 11 et la surveillance des vagues 16 à 19 sont des consignes d’alliance : viser 0 élimination par ses propres troupes chez soi tout en éliminant 100 % des Vikings, puis ajuster avec le R4. Le calendrier des prochains niveaux est une estimation de l’alliance, pas une annonce officielle. Les guides communautaires Kingshot Guides et 9to5Gaming sont cités dans cette section, traduite dans les sept langues du site.
 
 ## Aperçu local
 
