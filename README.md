@@ -5,7 +5,7 @@ Page statique adaptée au mobile : stratégie des Vikings et messages traduits e
 - **Comprendre et se préparer** : dix messages dans leur ordre logique (principe et points avec exemple, préparation de la ville, sortie des troupes, préparation collective, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement).
 - **Pendant l’événement** : onze messages (consignes et GO des vagues 10 et 20 avec leurs rappels, ainsi qu'un rappel final sur l'interdiction de soigner et d'éteindre le feu).
 
-Le sélecteur de langue situé dans la barre supérieure (`FR` / `EN` / `ES` / `PT-BR` / `العربية` / `PL` / `TR` / `繁中` / `简中`) traduit l'ensemble du site et des messages, et adapte la direction d'écriture (LTR / RTL). Sur chaque carte de message, les boutons de copie s'adaptent selon la langue choisie :
+Le sélecteur de langue sous forme de menu déroulant compact situé dans la barre supérieure (`FR` / `EN` / `ES` / `PT-BR` / `العربية` / `PL` / `TR` / `繁中` / `简中`) traduit l'ensemble du site et des messages, et adapte la direction d'écriture (LTR / RTL). Sur chaque carte de message, les boutons de copie s'adaptent selon la langue choisie :
 - En **FR** : boutons de copie **FR** et **EN**
 - En **ES** : boutons de copie **ES** et **EN**
 - En **PT-BR** : boutons de copie **PT-BR** et **EN**

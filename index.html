@@ -17,16 +17,29 @@
   <header class="topbar">
     <a class="brand" href="#" aria-label="Alliance PRO - PhxResistOrder"><img class="brand-logo" src="logo.png" alt="Alliance PRO" width="38" height="46"><span>KINGSHOT <span class="brand-divider">/</span> VIKINGS</span></a>
     <div class="topbar-actions">
-      <div class="language" role="group" data-i18n-aria="langAria" aria-label="Langue du site">
-        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-        <button type="button" data-lang="es" aria-pressed="false">ES</button>
-        <button type="button" data-lang="pt-BR" lang="pt-BR" aria-label="Português (Brasil)" aria-pressed="false">PT-BR</button>
-        <button type="button" data-lang="ar" lang="ar" aria-label="العربية" aria-pressed="false">العربية</button>
-        <button type="button" data-lang="pl" lang="pl" aria-label="Polski" aria-pressed="false">PL</button>
-        <button type="button" data-lang="tr" lang="tr" aria-label="Türkçe" aria-pressed="false">TR</button>
-        <button type="button" data-lang="zh-TW" lang="zh-TW" aria-label="繁體中文" aria-pressed="false">繁中</button>
-        <button type="button" data-lang="zh-CN" lang="zh-CN" aria-label="简体中文" aria-pressed="false">简中</button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button type="button" class="lang-trigger" id="lang-trigger" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="langAria" aria-label="Langue du site">
+          <svg class="lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="lang-current" id="lang-current">FR</span>
+          <svg class="lang-arrow" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="lang-menu" id="lang-menu" role="listbox" data-i18n-aria="langAria" aria-label="Langue du site" hidden>
+          <button type="button" role="option" data-lang="fr" aria-selected="true"><span class="lang-code">FR</span><span class="lang-name">Français</span></button>
+          <button type="button" role="option" data-lang="en" aria-selected="false"><span class="lang-code">EN</span><span class="lang-name">English</span></button>
+          <button type="button" role="option" data-lang="es" aria-selected="false"><span class="lang-code">ES</span><span class="lang-name">Español</span></button>
+          <button type="button" role="option" data-lang="pt-BR" lang="pt-BR" aria-selected="false"><span class="lang-code">PT-BR</span><span class="lang-name">Português (Brasil)</span></button>
+          <button type="button" role="option" data-lang="ar" lang="ar" aria-selected="false"><span class="lang-code">AR</span><span class="lang-name">العربية</span></button>
+          <button type="button" role="option" data-lang="pl" lang="pl" aria-selected="false"><span class="lang-code">PL</span><span class="lang-name">Polski</span></button>
+          <button type="button" role="option" data-lang="tr" lang="tr" aria-selected="false"><span class="lang-code">TR</span><span class="lang-name">Türkçe</span></button>
+          <button type="button" role="option" data-lang="zh-TW" lang="zh-TW" aria-selected="false"><span class="lang-code">繁中</span><span class="lang-name">繁體中文</span></button>
+          <button type="button" role="option" data-lang="zh-CN" lang="zh-CN" aria-selected="false"><span class="lang-code">简中</span><span class="lang-name">简体中文</span></button>
+        </div>
       </div>
     </div>
   </header>

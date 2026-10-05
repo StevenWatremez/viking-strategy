@@ -1162,9 +1162,41 @@ function updateStaticUI() {
     }
   });
 
-  document.querySelectorAll('.language [data-lang]').forEach(button => {
-    button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+  const currentLangEl = document.querySelector('#lang-current');
+  const langLabels = {
+    fr: 'FR',
+    en: 'EN',
+    es: 'ES',
+    'pt-BR': 'PT-BR',
+    ar: 'العربية',
+    pl: 'PL',
+    tr: 'TR',
+    'zh-TW': '繁中',
+    'zh-CN': '简中'
+  };
+  if (currentLangEl) {
+    currentLangEl.textContent = langLabels[language] || language.toUpperCase();
+  }
+
+  document.querySelectorAll('#lang-menu [data-lang]').forEach(button => {
+    button.setAttribute('aria-selected', String(button.dataset.lang === language));
   });
+}
+
+function setLangMenuOpen(open) {
+  const dropdown = document.querySelector('#lang-dropdown');
+  const trigger = document.querySelector('#lang-trigger');
+  const menu = document.querySelector('#lang-menu');
+  if (!dropdown || !trigger || !menu) return;
+
+  trigger.setAttribute('aria-expanded', String(open));
+  if (open) {
+    menu.removeAttribute('hidden');
+    dropdown.classList.add('open');
+  } else {
+    menu.setAttribute('hidden', '');
+    dropdown.classList.remove('open');
+  }
 }
 
 function render() {
@@ -1225,6 +1257,17 @@ async function copy(index, lang) {
 }
 
 document.addEventListener('click', event => {
+  const trigger = event.target.closest('#lang-trigger');
+  if (trigger) {
+    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+    setLangMenuOpen(!isExpanded);
+    return;
+  }
+
+  if (!event.target.closest('#lang-dropdown')) {
+    setLangMenuOpen(false);
+  }
+
   const button = event.target.closest('button');
   if (!button) return;
 
@@ -1239,12 +1282,42 @@ document.addEventListener('click', event => {
     try {
       localStorage.setItem('kingshot_lang', language);
     } catch {}
+    setLangMenuOpen(false);
     render();
+    document.querySelector('#lang-trigger')?.focus();
   }
 
   if (button.dataset.copy !== undefined) {
     const targetLang = button.dataset.copyLang || language;
     copy(Number(button.dataset.copy), targetLang);
+  }
+});
+
+document.addEventListener('keydown', event => {
+  const dropdown = document.querySelector('#lang-dropdown');
+  if (!dropdown || !dropdown.classList.contains('open')) return;
+
+  const menu = document.querySelector('#lang-menu');
+  const options = Array.from(menu.querySelectorAll('[data-lang]'));
+  const currentIndex = options.indexOf(document.activeElement);
+
+  if (event.key === 'Escape') {
+    setLangMenuOpen(false);
+    document.querySelector('#lang-trigger')?.focus();
+  } else if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    const next = currentIndex < options.length - 1 ? currentIndex + 1 : 0;
+    options[next]?.focus();
+  } else if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    const prev = currentIndex > 0 ? currentIndex - 1 : options.length - 1;
+    options[prev]?.focus();
+  } else if (event.key === 'Home') {
+    event.preventDefault();
+    options[0]?.focus();
+  } else if (event.key === 'End') {
+    event.preventDefault();
+    options[options.length - 1]?.focus();
   }
 });
 
