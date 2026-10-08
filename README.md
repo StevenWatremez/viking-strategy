@@ -2,7 +2,9 @@
 
 Page statique adaptée au mobile : stratégie des Vikings et messages traduits en français, anglais, espagnol, portugais du Brésil, arabe, polonais, turc, chinois traditionnel et chinois simplifié, avec traduction intégrale du site et copie en un clic.
 
-- **Comprendre et se préparer** : dix messages dans leur ordre logique (principe et points avec exemple, préparation de la ville, sortie des troupes, préparation collective, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement).
+- **Comprendre et se préparer** : douze messages, avec un rappel de participation de tous les membres, même hors ligne, puis un résumé QG (consigne d’alliance : infanterie uniquement, 80 000 maximum, héros d’infanterie en première position et GO du R4), puis principe et points avec exemple, préparation de la ville, sortie des troupes, préparation collective, renforts, règle du soin et du feu, dernière vérification, vagues 10 et 20, rapports et récapitulatif de l’événement.
+
+L’introduction et le premier message rappellent que tous les membres sont concernés, même hors ligne, et que les boucliers ne protègent pas contre les Vikings. Sources : [Kingshot Wiki](https://www.kingshot.wiki/events/viking-vengeance) pour les attaques et [Kingshot Guides](https://kingshotguides.com/guide/viking-vengeance-expert-guide-beginner-to-advanced/) pour les boucliers (réponse de l’auteur dans les commentaires).
 - **Pendant l’événement** : onze messages (consignes et GO des vagues 10 et 20 avec leurs rappels, ainsi qu'un rappel final sur l'interdiction de soigner et d'éteindre le feu).
 
 Le sélecteur de langue sous forme de menu déroulant compact situé dans la barre supérieure (`FR` / `EN` / `ES` / `PT-BR` / `العربية` / `PL` / `TR` / `繁中` / `简中`) traduit l'ensemble du site et des messages, et adapte la direction d'écriture (LTR / RTL). Sur chaque carte de message, les boutons de copie s'adaptent selon la langue choisie :
